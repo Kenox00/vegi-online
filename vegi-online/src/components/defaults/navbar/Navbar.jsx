@@ -155,7 +155,7 @@ const Navbar = () => {
 
       {/* Mobile Gift & Flowers Button */}
       <div className="lg:hidden px-4 py-3 border-t">
-        <button className="w-full flex items-center justify-center gap-2 bg-orange-500 text-white px-4 py-2 ">
+        <button className="w-full flex items-center justify-center gap-2 bg-primary text-white px-4 py-2 ">
             <img src={flower} alt="Flower" className='w-5 h-5'/>
           <span>Gifts & Flowers</span>
         </button>
