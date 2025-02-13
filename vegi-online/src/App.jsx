@@ -1,8 +1,11 @@
+import Home from "./pages/home/Home"
 
 
 const App = () => {
   return (
-    <div className='bg-red-500'>App</div>
+    <>
+      <Home/>
+    </>
   )
 }
 
