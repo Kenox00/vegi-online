@@ -22,12 +22,12 @@ const Navbar = () => {
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-          <img src={logo} alt="Vegi Online Logo" className="h-8 sm:h-10 max-w-[120px] w-auto" />
+          <img src={logo} alt="Vegi Online Logo" className="h-6 sm:h-8" />
           <div className="relative">
             <img 
               src={cart} 
               alt="cart" 
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
             />
             <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
           </div>
@@ -37,8 +37,9 @@ const Navbar = () => {
         <div className="hidden lg:flex justify-between items-center gap-4">
           {/* Logo & Search */}
           <div className="flex items-center gap-4 xl:gap-8 flex-1">
+            {/* Logo */}
             <div className="flex items-center gap-4">
-              <img src={logo} alt="Vegi Online Logo" className="h-10 xl:h-12 max-w-[150px] w-auto" />
+              <img src={logo} alt="Vegi Online Logo" className="h-8 xl:h-10" />
               <button className="p-2 xl:p-3 text-gray-700 font-medium hidden md:flex items-center gap-2 border border-gray-300 hover:border-gray-400 transition-colors">
                 All Categories
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,17 +63,29 @@ const Navbar = () => {
 
           {/* Contact, Cart, Account */}
           <div className="hidden lg:flex items-center gap-4 xl:gap-8">
+            {/* Contact */}
             <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer">
-              <img src={phone} alt="phone" className="w-7 h-7 xl:w-8 xl:h-8" />
+              <div className="w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
+                <img 
+                  src={phone} 
+                  alt="" 
+                  className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7"
+                />
+              </div>
               <div>
                 <p className="text-xs sm:text-sm text-gray-500">Contact</p>
                 <p className="font-medium text-sm sm:text-base">0782665552</p>
               </div>
             </div>
 
+            {/* Cart */}
             <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer">
-              <div className="relative flex items-center justify-center">
-                <img src={cart} alt="cart" className="w-7 h-7 xl:w-8 xl:h-8" />
+              <div className="w-8 h-8 xl:w-10 xl:h-10 relative flex items-center justify-center">
+                <img 
+                  src={cart} 
+                  alt="" 
+                  className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7"
+                />
                 <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
               </div>
               <div>
@@ -81,8 +94,15 @@ const Navbar = () => {
               </div>
             </div>
 
+            {/* Account */}
             <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer">
-              <img src={user} alt="user" className="w-7 h-7 xl:w-8 xl:h-8" />
+              <div className="w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
+                <img 
+                  src={user} 
+                  alt="" 
+                  className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7"
+                />
+              </div>
               <div>
                 <p className="text-xs sm:text-sm text-gray-500">Account</p>
                 <p className="font-medium text-sm sm:text-base">Log in</p>
@@ -118,13 +138,49 @@ const Navbar = () => {
           </nav>
           <div className="space-y-4">
             <div className="flex items-center gap-2 py-2 hover:text-green-600 cursor-pointer">
-              <img src={user} alt="user" className="w-6 h-6 sm:w-7 sm:h-7" />
+              <img 
+                src={user} 
+                alt="" 
+                className="w-5 h-5 sm:w-6 sm:h-6"
+              />
               <span>Account</span>
             </div>
             <div className="flex items-center gap-2 py-2 hover:text-green-600 cursor-pointer">
-              <img src={phone} alt="phone" className="w-6 h-6 sm:w-7 sm:h-7" />
+              <img 
+                src={phone} 
+                alt="" 
+                className="w-5 h-5 sm:w-6 sm:h-6"
+              />
               <span>Contact</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Lower Nav */}
+      <div className="border-t border-b border-gray-300 hidden lg:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center">
+            {/* Navigation Links */}
+            <nav>
+              <ul className="flex gap-4 xl:gap-8 py-4">
+                {['Fruits', 'Vegetables', 'Diary&eggs', 'New in', 'Offers'].map((item) => (
+                  <li key={item} className="text-gray-700 hover:text-green-600 cursor-pointer whitespace-nowrap">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* Gift & Flowers Button */}
+            <button className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 transition-colors text-white px-4 py-2">
+              <img 
+                src={flower} 
+                alt="Flower" 
+                className="w-4 h-4 sm:w-5 sm:h-5"
+              />
+              <span className="whitespace-nowrap">Gifts & Flowers</span>
+            </button>
           </div>
         </div>
       </div>
@@ -132,7 +188,11 @@ const Navbar = () => {
       {/* Mobile Gift & Flowers Button */}
       <div className="lg:hidden px-4 py-3 border-t">
         <button className="w-full flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 transition-colors text-white px-4 py-2 rounded">
-          <img src={flower} alt="Flower" className="w-6 h-6 sm:w-7 sm:h-7" />
+          <img 
+            src={flower} 
+            alt="Flower" 
+            className="w-4 h-4 sm:w-5 sm:h-5"
+          />
           <span>Gifts & Flowers</span>
         </button>
       </div>
