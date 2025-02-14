@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { useProducts } from '../../../../hooks/useProducts';
 import { ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const AllProduct = () => {
-  const { products: allProducts } = useProducts();
+  const { products: allProducts ,setSelectedProduct } = useProducts();
   const productsPerRow = 5;  // Based on the xl:grid-cols-5 setting
   const maxProducts = productsPerRow * 2;  // Two rows maximum
-  
+  const navigate = useNavigate();
+
   const categories = ["All Products", ...new Set(allProducts.map(product => product.category))];
   const [selectedCategory, setSelectedCategory] = useState("All Products");
   const [products, setProducts] = useState(allProducts.slice(0, maxProducts));
@@ -22,6 +24,11 @@ const AllProduct = () => {
       setProducts(filteredProducts);
     }
   };
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    navigate(`/products/details?id=${product.id}`);
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -53,7 +60,11 @@ const AllProduct = () => {
       {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {products.map((product) => (
-          <div key={product.id} className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <div 
+            key={product.id} 
+            className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+            onClick={() => handleProductClick(product)}
+          >
             <div className="aspect-square mb-4">
               <img 
                 src={product.image} 
@@ -69,7 +80,13 @@ const AllProduct = () => {
                   <span className="font-semibold">{product.price}</span>
                   <span className="p-1 text-sm text-black bg-gray-100 rounded-md">Rwf</span>
                 </div>
-                <button className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-orange-400 hover:text-white transition-colors">
+                <button 
+                  className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    // Add to cart logic here
+                  }}
+                >
                   +
                 </button>
               </div>

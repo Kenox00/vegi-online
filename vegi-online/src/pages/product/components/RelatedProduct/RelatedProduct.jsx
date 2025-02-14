@@ -1,10 +1,12 @@
 import { useState, useMemo } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useProducts } from '../../../../hooks/useProducts';
+import { useNavigate } from 'react-router-dom';
 
 const RelatedProduct = () => {
-  const { products: allProducts, selectedProduct } = useProducts();
+  const { products: allProducts, selectedProduct , setSelectedProduct} = useProducts();
   const [startIndex, setStartIndex] = useState(0);
+  const navigate = useNavigate();
 
   // Filter related products based on the selected product's category
   const relatedProducts = useMemo(() => {
@@ -15,6 +17,11 @@ const RelatedProduct = () => {
       product.id !== selectedProduct.id
     );
   }, [allProducts, selectedProduct]);
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    navigate(`/products/details?id=${product.id}`);
+  }
 
   // Handle edge case when there are no related products
   if (relatedProducts.length === 0) {
@@ -59,6 +66,7 @@ const RelatedProduct = () => {
             <button 
               onClick={prevSlide}
               className="bg-white rounded-full p-2 shadow-sm hover:bg-gray-50 transition-colors"
+              
             >
               <ChevronLeft className="w-5 h-5 text-gray-600" />
             </button>
@@ -84,6 +92,7 @@ const RelatedProduct = () => {
               <div
                 key={product.id}
                 className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
+                onClick={() => handleProductClick(product)}
               >
                 <div className="aspect-square mb-4">
                   <img 

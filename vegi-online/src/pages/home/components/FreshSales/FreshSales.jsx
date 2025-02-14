@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useProducts } from '../../../../hooks/useProducts';
+import { useNavigate } from 'react-router-dom';
 
 const FreshSales = () => {
-  const { products: allProducts } = useProducts();
+  const { products: allProducts , setSelectedProduct} = useProducts();
   const [startIndex, setStartIndex] = useState(0);
-  
+  const navigate = useNavigate();
   // Define responsive display configuration
   const itemsToShow = {
     sm: 1,
@@ -26,6 +27,11 @@ const FreshSales = () => {
       prevIndex - 1 < 0 ? allProducts.length - 1 : prevIndex - 1
     );
   };
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    navigate(`/products/details?id=${product.id}`);
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -56,6 +62,7 @@ const FreshSales = () => {
                 key={product.id}
                 className={`bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer
                   ${position >= Object.values(itemsToShow)[Math.min(4, Math.floor(window.innerWidth / 640))] ? 'hidden' : ''}`}
+                onClick={() => handleProductClick(product)}
               >
                 <div className="aspect-square mb-4">
                   <img 
