@@ -1,32 +1,48 @@
-// ProductContext.jsx
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useEffect } from "react";
 import ProductData from '../../data/ProductData.json';
 const { Products } = ProductData;
 
-
 export const ProductContext = createContext();
 
-// Utility function to parse price strings
 const parsePrice = (price) => parseInt(price.replace(/,/g, ''), 10);
+
+// Initialize state with data from localStorage if available
+const initialState = {
+  products: Products,
+  selectedProduct: localStorage.getItem('selectedProduct') 
+    ? JSON.parse(localStorage.getItem('selectedProduct'))
+    : null,
+};
 
 export const productReducer = (state, action) => {
   switch (action.type) {
     case "SET_PRODUCTS":
       return {
+        ...state,
         products: action.payload,
+      };
+    case "SET_SELECTED_PRODUCT":
+      // Store in localStorage when setting selected product
+      localStorage.setItem('selectedProduct', JSON.stringify(action.payload));
+      return {
+        ...state,
+        selectedProduct: action.payload,
       };
     case "FILTER_BY_CATEGORY":
       return {
-        products: state.products.filter(product => product.category === action.payload),
+        ...state,
+        products: Products.filter(product => product.category === action.payload),
       };
     case "SEARCH_PRODUCTS":
       return {
-        products: state.products.filter(product => 
+        ...state,
+        products: Products.filter(product => 
           product.name.toLowerCase().includes(action.payload.toLowerCase())
         ),
       };
     case "SORT_BY_PRICE":
       return {
+        ...state,
         products: [...state.products].sort((a, b) => {
           const priceA = parsePrice(a.price);
           const priceB = parsePrice(b.price);
@@ -35,18 +51,29 @@ export const productReducer = (state, action) => {
       };
     case "RESET_PRODUCTS":
       return {
-        products: Products, // Reset to the original product data
+        ...state,
+        products: Products,
       };
     default:
-      console.warn(`Unknown action type: ${action.type}`);
       return state;
   }
 };
 
 const ProductContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(productReducer, {
-    products: Products, // Initialize with the imported product data
-  });
+  const [state, dispatch] = useReducer(productReducer, initialState);
+
+  // Recover selected product from URL if not in state
+  useEffect(() => {
+    if (!state.selectedProduct && window.location.pathname === '/products/details') {
+      const productId = new URLSearchParams(window.location.search).get('id');
+      if (productId) {
+        const product = Products.find(p => p.id.toString() === productId);
+        if (product) {
+          dispatch({ type: 'SET_SELECTED_PRODUCT', payload: product });
+        }
+      }
+    }
+  }, []);
 
   return (
     <ProductContext.Provider value={{ ...state, dispatch }}>

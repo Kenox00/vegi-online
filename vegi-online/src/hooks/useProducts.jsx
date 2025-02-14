@@ -1,9 +1,12 @@
 import { useContext } from 'react';
 import { ProductContext } from '../context/ProductContext';
 
-
 export const useProducts = () => {
-  const { products, dispatch } = useContext(ProductContext);
+  const { products, selectedProduct, dispatch } = useContext(ProductContext);
+
+  const setSelectedProduct = (product) => {
+    dispatch({ type: 'SET_SELECTED_PRODUCT', payload: product });
+  };
 
   const filterByCategory = (category) => {
     dispatch({ type: 'FILTER_BY_CATEGORY', payload: category });
@@ -23,9 +26,11 @@ export const useProducts = () => {
 
   return {
     products,
+    selectedProduct,
+    setSelectedProduct,
     filterByCategory,
     searchProducts,
     sortByPrice,
-    resetProducts
+    resetProducts,
   };
 };

@@ -1,14 +1,18 @@
-// ProductPage.jsx
 import { ChevronRight } from 'lucide-react';
 import { useProducts } from '../../../../hooks/useProducts';
-
+import { useNavigate } from 'react-router-dom';
 
 const ProductPage = () => {
-  const { products } = useProducts(); // Use the useProducts hook to get the products
+  const { products, setSelectedProduct } = useProducts();
+  const navigate = useNavigate();
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    navigate(`/products/details?id=${product.id}`);
+  }
 
   return (
-    <div className="container mx-auto px-4 py-8 ">
-      {/* Header Section */}
+    <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-gray-800">Recommended Products</h2>
         <button className="flex items-center text-primary hover:text-primary/80 transition-colors">
@@ -17,12 +21,12 @@ const ProductPage = () => {
         </button>
       </div>
 
-      {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
           <div 
             key={product.id} 
             className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+            onClick={() => handleProductClick(product)}
           >
             <div className="aspect-square mb-4">
               <img 
@@ -39,7 +43,13 @@ const ProductPage = () => {
                   <span className="font-semibold">{product.price}</span>
                   <span className="p-1 text-sm text-black bg-gray-100 rounded-md">Rwf</span>
                 </div>
-                <button className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                <button 
+                  className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    // Add to cart logic here
+                  }}
+                >
                   +
                 </button>
               </div>
