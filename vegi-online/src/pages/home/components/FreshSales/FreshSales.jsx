@@ -1,29 +1,33 @@
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useProducts } from '../../../../hooks/useProducts';
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useProducts } from "../../../../hooks/useProducts";
+import { Link, useNavigate } from "react-router-dom";
+import { useCart } from "../../../../hooks/useCart";
 
 const FreshSales = () => {
-  const { products: allProducts , setSelectedProduct} = useProducts();
+  const { products: allProducts, setSelectedProduct } = useProducts();
+  const { addToCart, removeFromCart } = useCart();
   const [startIndex, setStartIndex] = useState(0);
+  const [addedToCart, setAddedToCart] = useState([]);
   const navigate = useNavigate();
+
   // Define responsive display configuration
   const itemsToShow = {
     sm: 1,
     md: 4,
     lg: 5,
     xl: 7,
-    '2xl': 5
+    "2xl": 5,
   };
 
   const nextSlide = () => {
-    setStartIndex((prevIndex) => 
+    setStartIndex((prevIndex) =>
       prevIndex + 1 >= allProducts.length ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
-    setStartIndex((prevIndex) => 
+    setStartIndex((prevIndex) =>
       prevIndex - 1 < 0 ? allProducts.length - 1 : prevIndex - 1
     );
   };
@@ -31,20 +35,35 @@ const FreshSales = () => {
   const handleProductClick = (product) => {
     setSelectedProduct(product);
     navigate(`/products/details?id=${product.id}`);
-  }
+  };
+
+  const handleAddToCart = (e, product) => {
+    e.stopPropagation();
+    addToCart(product, 1);
+    setAddedToCart([...addedToCart, product.id]);
+  };
+
+  const handleRemoveFromCart = (e, productId) => {
+    e.stopPropagation();
+    removeFromCart(productId);
+    setAddedToCart(addedToCart.filter((id) => id !== productId));
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-semibold text-secondary">Flash Sales</h2>
+        <Link to={`/products`} >
+                <h2 className="text-xl font-semibold text-secondary">Flash Sales</h2>
+        </Link>
+
         <div className="flex gap-2">
-          <button 
+          <button
             onClick={prevSlide}
             className="bg-white rounded-full p-2 shadow-sm hover:bg-gray-50 transition-colors"
           >
             <ChevronLeft className="w-5 h-5 text-gray-600" />
           </button>
-          <button 
+          <button
             onClick={nextSlide}
             className="bg-white rounded-full p-2 shadow-sm hover:bg-gray-50 transition-colors"
           >
@@ -56,17 +75,25 @@ const FreshSales = () => {
       <div className="relative">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 overflow-hidden">
           {allProducts.map((product, index) => {
-            const position = (index - startIndex + allProducts.length) % allProducts.length;
+            const position =
+              (index - startIndex + allProducts.length) % allProducts.length;
             return (
               <div
                 key={product.id}
                 className={`bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer
-                  ${position >= Object.values(itemsToShow)[Math.min(4, Math.floor(window.innerWidth / 640))] ? 'hidden' : ''}`}
+                  ${
+                    position >=
+                    Object.values(itemsToShow)[
+                      Math.min(4, Math.floor(window.innerWidth / 640))
+                    ]
+                      ? "hidden"
+                      : ""
+                  }`}
                 onClick={() => handleProductClick(product)}
               >
                 <div className="aspect-square mb-4">
-                  <img 
-                    src={product.image} 
+                  <img
+                    src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover rounded-lg"
                   />
@@ -77,11 +104,25 @@ const FreshSales = () => {
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-1">
                       <span className="font-semibold">{product.price}</span>
-                      <span className="p-1 text-sm text-black bg-gray-100 rounded-md">Rwf</span>
+                      <span className="p-1 text-sm text-black bg-gray-100 rounded-md">
+                        Rwf
+                      </span>
                     </div>
-                    <button className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                      +
-                    </button>
+                    {addedToCart.includes(product.id) ? (
+                      <button
+                        className="text-primary border borde-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                        onClick={(e) => handleRemoveFromCart(e, product.id)}
+                      >
+                        X
+                      </button>
+                    ) : (
+                      <button
+                        className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                        onClick={(e) => handleAddToCart(e, product)}
+                      >
+                        +
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

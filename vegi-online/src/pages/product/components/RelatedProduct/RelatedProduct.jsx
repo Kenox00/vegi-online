@@ -2,10 +2,13 @@ import { useState, useMemo } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useProducts } from '../../../../hooks/useProducts';
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../../../../hooks/useCart';
 
 const RelatedProduct = () => {
-  const { products: allProducts, selectedProduct , setSelectedProduct} = useProducts();
+  const { products: allProducts, selectedProduct, setSelectedProduct } = useProducts();
+  const { addToCart, removeFromCart } = useCart();
   const [startIndex, setStartIndex] = useState(0);
+  const [addedToCart, setAddedToCart] = useState([]);
   const navigate = useNavigate();
 
   // Filter related products based on the selected product's category
@@ -21,7 +24,19 @@ const RelatedProduct = () => {
   const handleProductClick = (product) => {
     setSelectedProduct(product);
     navigate(`/products/details?id=${product.id}`);
-  }
+  };
+
+  const handleAddToCart = (e, product) => {
+    e.stopPropagation();
+    addToCart(product, 1);
+    setAddedToCart([...addedToCart, product.id]);
+  };
+
+  const handleRemoveFromCart = (e, productId) => {
+    e.stopPropagation();
+    removeFromCart(productId);
+    setAddedToCart(addedToCart.filter(id => id !== productId));
+  };
 
   // Handle edge case when there are no related products
   if (relatedProducts.length === 0) {
@@ -66,7 +81,6 @@ const RelatedProduct = () => {
             <button 
               onClick={prevSlide}
               className="bg-white rounded-full p-2 shadow-sm hover:bg-gray-50 transition-colors"
-              
             >
               <ChevronLeft className="w-5 h-5 text-gray-600" />
             </button>
@@ -109,9 +123,21 @@ const RelatedProduct = () => {
                       <span className="font-semibold">{product.price}</span>
                       <span className="p-1 text-sm text-black bg-gray-100 rounded-md">Rwf</span>
                     </div>
-                    <button className="text-orange-400 border border-orange-400 rounded-md w-8 h-8 flex items-center justify-center hover:bg-orange-400 hover:text-white transition-colors">
-                      +
-                    </button>
+                    {addedToCart.includes(product.id) ? (
+                      <button 
+                        className="text-red-500 border border-red-500 rounded-md w-8 h-8 flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors"
+                        onClick={(e) => handleRemoveFromCart(e, product.id)}
+                      >
+                        ❌
+                      </button>
+                    ) : (
+                      <button 
+                        className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                        onClick={(e) => handleAddToCart(e, product)}
+                      >
+                        +
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

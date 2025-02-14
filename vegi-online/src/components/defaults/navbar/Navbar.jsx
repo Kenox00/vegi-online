@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import { Search, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/navbar/Logo.png';
 import phone from '../../../assets/images/navbar/Phone.png';
 import cart from '../../../assets/images/navbar/cart.png';
 import user from '../../../assets/images/navbar/user.png';
 import flower from '../../../assets/images/navbar/flower.png';
+import { useCart } from '../../../hooks/useCart';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { totalItems ,totalPrice } = useCart();
 
   return (
     <div className="w-full">
@@ -22,15 +25,19 @@ const Navbar = () => {
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-          <img src={logo} alt="Vegi Online Logo" className="h-6 sm:h-8" />
-          <div className="relative">
+          <Link to="/">
+            <img src={logo} alt="Vegi Online Logo" className="h-6 sm:h-8" />
+          </Link>
+          <Link to="/products/cart" className="relative">
             <img 
               src={cart} 
               alt="cart" 
               className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
             />
-            <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
-          </div>
+            <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+              {totalItems}
+            </span>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -39,7 +46,9 @@ const Navbar = () => {
           <div className="flex items-center gap-4 xl:gap-8 flex-1">
             {/* Logo */}
             <div className="flex items-center gap-4">
-              <img src={logo} alt="Vegi Online Logo" className="h-8 xl:h-10" />
+              <Link to="/">
+                <img src={logo} alt="Vegi Online Logo" className="h-8 xl:h-10" />
+              </Link>
               <button className="p-2 xl:p-3 text-gray-700 font-medium hidden md:flex items-center gap-2 border border-gray-300 hover:border-gray-400 transition-colors">
                 All Categories
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,7 +63,7 @@ const Navbar = () => {
                 <input
                   type="text"
                   placeholder="Search for products"
-                  className="w-full px-4 py-2 pr-10 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-green-500"
+                  className="w-full px-4 py-2 pr-10 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-secondary"
                 />
                 <Search className="absolute right-3 text-gray-400" size={20} />
               </div>
@@ -64,7 +73,7 @@ const Navbar = () => {
           {/* Contact, Cart, Account */}
           <div className="hidden lg:flex items-center gap-4 xl:gap-8">
             {/* Contact */}
-            <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer">
+            <div className="flex items-center gap-2 hover:text-secondary cursor-pointer">
               <div className="w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
                 <img 
                   src={phone} 
@@ -79,23 +88,25 @@ const Navbar = () => {
             </div>
 
             {/* Cart */}
-            <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer">
+            <Link to="/products/cart" className="flex items-center gap-2 hover:text-secondary cursor-pointer">
               <div className="w-8 h-8 xl:w-10 xl:h-10 relative flex items-center justify-center">
                 <img 
                   src={cart} 
                   alt="" 
                   className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7"
                 />
-                <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                <span className="absolute -top-1 -right-1 bg-secondary text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+                  {totalItems}
+                </span>
               </div>
               <div>
                 <p className="text-xs sm:text-sm text-gray-500">My Cart</p>
-                <p className="font-medium text-sm sm:text-base">00rw</p>
+                <p className="font-medium text-sm sm:text-base">{totalPrice.toLocaleString()} Rwf</p>
               </div>
-            </div>
+            </Link>
 
             {/* Account */}
-            <div className="flex items-center gap-2 hover:text-green-600 cursor-pointer">
+            <div className="flex items-center gap-2 hover:text-secondary cursor-pointer">
               <div className="w-8 h-8 xl:w-10 xl:h-10 flex items-center justify-center">
                 <img 
                   src={user} 
@@ -117,7 +128,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search for products"
-              className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500"
+              className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary"
             />
             <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
           </div>
@@ -130,7 +141,7 @@ const Navbar = () => {
           <nav>
             <ul className="space-y-2">
               {['Fruits', 'Vegetables', 'Diary&eggs', 'New in', 'Offers'].map((item) => (
-                <li key={item} className="text-gray-700 py-2 border-b hover:text-green-600 cursor-pointer">
+                <li key={item} className="text-gray-700 py-2 border-b hover:text-secondary cursor-pointer">
                   {item}
                 </li>
               ))}
@@ -165,7 +176,7 @@ const Navbar = () => {
             <nav>
               <ul className="flex gap-4 xl:gap-8 py-4">
                 {['Fruits', 'Vegetables', 'Diary&eggs', 'New in', 'Offers'].map((item) => (
-                  <li key={item} className="text-gray-700 hover:text-green-600 cursor-pointer whitespace-nowrap">
+                  <li key={item} className="text-gray-700 hover:text-secondary cursor-pointer whitespace-nowrap">
                     {item}
                   </li>
                 ))}
