@@ -1,0 +1,354 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "name": "Juicy Glow Apples",
+      "category": "Fruits",
+      "price": "3,013,008",
+      "image": "https://picsum.photos/seed/apple1/300/300"
+    },
+    {
+      "id": 2,
+      "name": "SweetRoot Carrots",
+      "category": "Vegetables",
+      "price": "3,013,008",
+      "image": "https://picsum.photos/seed/carrot2/300/300"
+    },
+    {
+      "id": 3,
+      "name": "TaterGold Potatoes",
+      "category": "Vegetables",
+      "price": "3,013,008",
+      "image": "https://picsum.photos/seed/potato3/300/300"
+    },
+    {
+      "id": 4,
+      "name": "SweetRoot Carrots",
+      "category": "Vegetables",
+      "price": "3,013,008",
+      "image": "https://picsum.photos/seed/carrot4/300/300"
+    },
+    {
+      "id": 5,
+      "name": "TaterGold Potatoes",
+      "category": "Vegetables",
+      "price": "3,013,008",
+      "image": "https://picsum.photos/seed/potato5/300/300"
+    },
+    {
+      "id": 6,
+      "name": "PureTuber Potatoes",
+      "category": "Vegetables",
+      "price": "3,013,008",
+      "image": "https://picsum.photos/seed/potato6/300/300"
+    },
+    {
+      "id": 7,
+      "name": "SweetLeaf Bananas",
+      "category": "Fruits",
+      "price": "3,013,008",
+      "image": "https://picsum.photos/seed/banana7/300/300"
+    },
+    {
+      "id": 8,
+      "name": "ButterGlow Spread",
+      "category": "Dairy&Eggs",
+      "price": "3,013,008",
+      "image": "https://picsum.photos/seed/butter8/300/300"
+    },
+    {
+      "id": 9,
+      "name": "Juicy Bloom Mangoes",
+      "category": "Fruits",
+      "price": "3,013,008",
+      "image": "https://picsum.photos/seed/mango9/300/300"
+    },
+    {
+      "id": 10,
+      "name": "SunGlow Tomatoes",
+      "category": "Vegetables",
+      "price": "3,013,008",
+      "image": "https://picsum.photos/seed/tomato10/300/300"
+    },
+    {
+      "id": 11,
+      "name": "FreshMist Spinach",
+      "category": "Vegetables",
+      "price": "2,567,890",
+      "image": "https://picsum.photos/seed/spinach11/300/300"
+    },
+    {
+      "id": 12,
+      "name": "Creamy Delight Yogurt",
+      "category": "Dairy&Eggs",
+      "price": "1,234,567",
+      "image": "https://picsum.photos/seed/yogurt12/300/300"
+    },
+    {
+      "id": 13,
+      "name": "Golden Sunrise Oranges",
+      "category": "Fruits",
+      "price": "2,890,123",
+      "image": "https://picsum.photos/seed/orange13/300/300"
+    },
+    {
+      "id": 14,
+      "name": "Farm Fresh Eggs",
+      "category": "Dairy&Eggs",
+      "price": "1,789,456",
+      "image": "https://picsum.photos/seed/eggs14/300/300"
+    },
+    {
+      "id": 15,
+      "name": "Crisp Garden Lettuce",
+      "category": "Vegetables",
+      "price": "1,456,789",
+      "image": "https://picsum.photos/seed/lettuce15/300/300"
+    },
+    {
+      "id": 16,
+      "name": "Sweet Valley Strawberries",
+      "category": "Fruits",
+      "price": "3,234,567",
+      "image": "https://picsum.photos/seed/strawberry16/300/300"
+    },
+    {
+      "id": 17,
+      "name": "Creamy Swiss Cheese",
+      "category": "Dairy&Eggs",
+      "price": "4,567,890",
+      "image": "https://picsum.photos/seed/cheese17/300/300"
+    },
+    {
+      "id": 18,
+      "name": "Garden Fresh Cucumber",
+      "category": "Vegetables",
+      "price": "1,678,901",
+      "image": "https://picsum.photos/seed/cucumber18/300/300"
+    },
+    {
+      "id": 19,
+      "name": "Tropical Delight Pineapple",
+      "category": "Fruits",
+      "price": "3,789,012",
+      "image": "https://picsum.photos/seed/pineapple19/300/300"
+    },
+    {
+      "id": 20,
+      "name": "Pure White Milk",
+      "category": "Dairy&Eggs",
+      "price": "2,345,678",
+      "image": "https://picsum.photos/seed/milk20/300/300"
+    },
+    {
+      "id": 21,
+      "name": "Green Glory Broccoli",
+      "category": "Vegetables",
+      "price": "2,123,456",
+      "image": "https://picsum.photos/seed/broccoli21/300/300"
+    },
+    {
+      "id": 22,
+      "name": "Sweet Harvest Grapes",
+      "category": "Fruits",
+      "price": "3,456,789",
+      "image": "https://picsum.photos/seed/grapes22/300/300"
+    },
+    {
+      "id": 23,
+      "name": "Cream Supreme Butter",
+      "category": "Dairy&Eggs",
+      "price": "2,789,012",
+      "image": "https://picsum.photos/seed/butter23/300/300"
+    },
+    {
+      "id": 24,
+      "name": "Garden Fresh Bell Peppers",
+      "category": "Vegetables",
+      "price": "2,012,345",
+      "image": "https://picsum.photos/seed/pepper24/300/300"
+    },
+    {
+      "id": 25,
+      "name": "Tropical Bliss Papaya",
+      "category": "Fruits",
+      "price": "3,678,901",
+      "image": "https://picsum.photos/seed/papaya25/300/300"
+    },
+    {
+      "id": 26,
+      "name": "Classic Cheddar Cheese",
+      "category": "Dairy&Eggs",
+      "price": "3,901,234",
+      "image": "https://picsum.photos/seed/cheddar26/300/300"
+    },
+    {
+      "id": 27,
+      "name": "Crispy Fresh Celery",
+      "category": "Vegetables",
+      "price": "1,345,678",
+      "image": "https://picsum.photos/seed/celery27/300/300"
+    },
+    {
+      "id": 28,
+      "name": "Sweet Glory Peaches",
+      "category": "Fruits",
+      "price": "3,567,890",
+      "image": "https://picsum.photos/seed/peach28/300/300"
+    },
+    {
+      "id": 29,
+      "name": "Creamy Greek Yogurt",
+      "category": "Dairy&Eggs",
+      "price": "2,789,012",
+      "image": "https://picsum.photos/seed/yogurt29/300/300"
+    },
+    {
+      "id": 30,
+      "name": "Garden Fresh Zucchini",
+      "category": "Vegetables",
+      "price": "1,901,234",
+      "image": "https://picsum.photos/seed/zucchini30/300/300"
+    },
+    {
+      "id": 31,
+      "name": "Sweet Tropical Kiwi",
+      "category": "Fruits",
+      "price": "2,345,678",
+      "image": "https://picsum.photos/seed/kiwi31/300/300"
+    },
+    {
+      "id": 32,
+      "name": "Farm Fresh Cream",
+      "category": "Dairy&Eggs",
+      "price": "2,567,890",
+      "image": "https://picsum.photos/seed/cream32/300/300"
+    },
+    {
+      "id": 33,
+      "name": "Crisp Garden Asparagus",
+      "category": "Vegetables",
+      "price": "3,789,012",
+      "image": "https://picsum.photos/seed/asparagus33/300/300"
+    },
+    {
+      "id": 34,
+      "name": "Sweet Ripe Plums",
+      "category": "Fruits",
+      "price": "2,901,234",
+      "image": "https://picsum.photos/seed/plum34/300/300"
+    },
+    {
+      "id": 35,
+      "name": "Rich Mozzarella Cheese",
+      "category": "Dairy&Eggs",
+      "price": "3,123,456",
+      "image": "https://picsum.photos/seed/mozzarella35/300/300"
+    },
+    {
+      "id": 36,
+      "name": "Garden Fresh Brussels Sprouts",
+      "category": "Vegetables",
+      "price": "2,345,678",
+      "image": "https://picsum.photos/seed/brussels36/300/300"
+    },
+    {
+      "id": 37,
+      "name": "Sweet Juicy Pears",
+      "category": "Fruits",
+      "price": "2,567,890",
+      "image": "https://picsum.photos/seed/pear37/300/300"
+    },
+    {
+      "id": 38,
+      "name": "Organic Soy Milk",
+      "category": "Dairy&Eggs",
+      "price": "2,789,012",
+      "image": "https://picsum.photos/seed/soymilk38/300/300"
+    },
+    {
+      "id": 39,
+      "name": "Fresh Tender Cauliflower",
+      "category": "Vegetables",
+      "price": "2,901,234",
+      "image": "https://picsum.photos/seed/cauliflower39/300/300"
+    },
+    {
+      "id": 40,
+      "name": "Sweet Ripe Cherries",
+      "category": "Fruits",
+      "price": "3,123,456",
+      "image": "https://picsum.photos/seed/cherry40/300/300"
+    },
+    {
+      "id": 41,
+      "name": "Organic Almond Milk",
+      "category": "Dairy&Eggs",
+      "price": "2,345,678",
+      "image": "https://picsum.photos/seed/almondmilk41/300/300"
+    },
+    {
+      "id": 42,
+      "name": "Garden Fresh Green Beans",
+      "category": "Vegetables",
+      "price": "1,567,890",
+      "image": "https://picsum.photos/seed/greenbeans42/300/300"
+    },
+    {
+      "id": 43,
+      "name": "Sweet Ripe Blueberries",
+      "category": "Fruits",
+      "price": "3,789,012",
+      "image": "https://picsum.photos/seed/blueberry43/300/300"
+    },
+    {
+      "id": 44,
+      "name": "Creamy Cottage Cheese",
+      "category": "Dairy&Eggs",
+      "price": "2,901,234",
+      "image": "https://picsum.photos/seed/cottage44/300/300"
+    },
+    {
+      "id": 45,
+      "name": "Fresh Crisp Radishes",
+      "category": "Vegetables",
+      "price": "1,123,456",
+      "image": "https://picsum.photos/seed/radish45/300/300"
+    },
+    {
+      "id": 46,
+      "name": "Sweet Fresh Raspberries",
+      "category": "Fruits",
+      "price": "3,345,678",
+      "image": "https://picsum.photos/seed/raspberry46/300/300"
+    },
+    {
+      "id": 47,
+      "name": "Organic Oat Milk",
+      "category": "Dairy&Eggs",
+      "price": "2,567,890",
+      "image": "https://picsum.photos/seed/oatmilk47/300/300"
+    },
+    {
+      "id": 48,
+      "name": "Garden Fresh Artichokes",
+      "category": "Vegetables",
+      "price": "2,789,012",
+      "image": "https://picsum.photos/seed/artichoke48/300/300"
+    },
+    {
+      "id": 49,
+      "name": "Sweet Ripe Blackberries",
+      "category": "Fruits",
+      "price": "3,901,234",
+      "image": "https://picsum.photos/seed/blackberry49/300/300"
+    },
+    {
+      "id": 50,
+      "name": "Premium Gouda Cheese",
+      "category": "Dairy&Eggs",
+      "price": "4,123,456",
+      "image": "https://picsum.photos/seed/gouda50/300/300"
+    }
+  ]
+}
