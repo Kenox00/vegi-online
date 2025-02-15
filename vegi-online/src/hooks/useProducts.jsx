@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { ProductContext } from '../context/ProductContext';
 
 export const useProducts = () => {
-  const { products, selectedProduct, dispatch } = useContext(ProductContext);
+  const { products, filteredProducts, selectedProduct, dispatch } = useContext(ProductContext);
 
   const setSelectedProduct = (product) => {
     dispatch({ type: 'SET_SELECTED_PRODUCT', payload: product });
@@ -25,7 +25,7 @@ export const useProducts = () => {
   };
 
   return {
-    products,
+    products: filteredProducts, // Return filteredProducts instead of products
     selectedProduct,
     setSelectedProduct,
     filterByCategory,

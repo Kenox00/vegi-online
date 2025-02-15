@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Categories = () => {
+  const navigate = useNavigate();
   const categoryData = {
     'Fruits': [
       'Fresh Fruits',
@@ -57,6 +59,12 @@ const Categories = () => {
     }));
   };
 
+  const handleSubcategoryClick = (mainCategory, subcategory) => {
+    navigate(
+      `/products?category=${encodeURIComponent(mainCategory)}&subcategory=${encodeURIComponent(subcategory)}`
+    );
+  };
+
   return (
     <div className="max-w-xs w-64 bg-white shadow-sm rounded-lg">
       <div className="p-4 border-b border-gray-200">
@@ -83,6 +91,7 @@ const Categories = () => {
                 {items.map((item) => (
                   <button
                     key={item}
+                    onClick={() => handleSubcategoryClick(category, item)}
                     className="w-full text-left px-2 py-1.5 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
                   >
                     {item}

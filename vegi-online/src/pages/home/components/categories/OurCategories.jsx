@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import fruits from '../../../../assets/images/categories/fruits.png';
 import vegetables from '../../../../assets/images/categories/vegetables.png';
 import herbs from '../../../../assets/images/categories/herbs.png';
@@ -11,6 +12,8 @@ import snacks from '../../../../assets/images/categories/snacks.png';
 import mobileApp from '../../../../assets/images/categories/mobileapp.png';
 
 const OurCategories = () => {
+  const navigate = useNavigate();
+
   const categories = [
     { name: "Fruits", image: fruits },
     { name: "Vegetables", image: vegetables },
@@ -23,6 +26,10 @@ const OurCategories = () => {
     { name: "Frozen Foods", image: frozenfood },
     { name: "Snacks", image: snacks }
   ];
+
+  const handleCategoryClick = (categoryName) => {
+    navigate(`/products?category=${categoryName}`);
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
@@ -39,7 +46,11 @@ const OurCategories = () => {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 ">
             {categories.map((category, index) => (
-              <div key={index} className="flex flex-col items-center group cursor-pointer">
+              <div
+                key={index}
+                className="flex flex-col items-center group cursor-pointer"
+                onClick={() => handleCategoryClick(category.name)}
+              >
                 <div className=" flex-col w-full aspect-square border border-gray-200 bg-gray-50 flex items-center justify-center p-4 transition-all duration-300 group-hover:shadow-lg">
                   <img
                     src={category.image}
@@ -48,7 +59,6 @@ const OurCategories = () => {
                   />
                    <p className="text-sm md:text-base text-gray-700 font-medium">{category.name}</p>
                 </div>
-
               </div>
             ))}
           </div>

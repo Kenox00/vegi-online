@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Minus, Plus } from 'lucide-react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useProducts } from '../../../../hooks/useProducts';
+import { useCart } from '../../../../hooks/useCart';
 import ProductData from '../../../../../data/ProductData.json';
 
 const ProductDetails = () => {
@@ -10,6 +11,7 @@ const ProductDetails = () => {
   const [searchParams] = useSearchParams();
   const { selectedProduct, setSelectedProduct } = useProducts();
   const { Products } = ProductData;
+  const { cartItems, addToCart, removeFromCart } = useCart();
 
   useEffect(() => {
     if (!selectedProduct) {
@@ -45,6 +47,16 @@ const ProductDetails = () => {
   const decrementQuantity = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
   const totalPrice = parseFloat(selectedProduct.price.replace(/,/g, '')) * quantity;
   const formattedTotal = totalPrice.toLocaleString();
+
+  const isInCart = cartItems.some(item => item.product.id === selectedProduct.id);
+
+  const handleCartAction = () => {
+    if (isInCart) {
+      removeFromCart(selectedProduct.id);
+    } else {
+      addToCart(selectedProduct, quantity);
+    }
+  };
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -91,8 +103,11 @@ const ProductDetails = () => {
             <span>{formattedTotal} rwf</span>
           </div>
 
-          <button className="w-full bg-primary text-white py-3 text-lg font-medium hover:bg-orange-600 transition-colors">
-            Add to cart
+          <button 
+            onClick={handleCartAction}
+            className="w-full bg-primary text-white py-3 text-lg font-medium hover:bg-orange-600 transition-colors"
+          >
+            {isInCart ? 'Remove from cart' : 'Add to cart'}
           </button>
         </div>
       </div>
