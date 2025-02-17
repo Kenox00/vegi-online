@@ -1,4 +1,5 @@
-import React, { createContext, useReducer, useEffect } from 'react';
+/* eslint-disable react-refresh/only-export-components */
+import { createContext, useReducer, useEffect } from "react";
 import ProductData from '../../data/ProductData.json';
 const { Products } = ProductData;
 
