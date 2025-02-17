@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useReducer, useEffect } from "react";
 import ProductData from '../../data/ProductData.json';
 const { Products } = ProductData;
@@ -59,6 +60,7 @@ export const productReducer = (state, action) => {
   }
 };
 
+// eslint-disable-next-line react/prop-types
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(productReducer, initialState);
 

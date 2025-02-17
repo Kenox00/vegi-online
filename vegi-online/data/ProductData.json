@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Juicy Glow Apples",
       "category": "Fruits",
-      "price": "3,013,008",
+      "price": "2000",
       "image": "https://picsum.photos/seed/apple1/300/300",
       "description": "Crisp, sweet apples with a radiant glow, perfect for snacking or baking."
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "name": "SweetRoot Carrots",
       "category": "Vegetables",
-      "price": "3,013,008",
+      "price": "2000",
       "image": "https://picsum.photos/seed/carrot2/300/300",
       "description": "Fresh, crunchy carrots with a natural sweetness, ideal for salads and cooking."
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "TaterGold Potatoes",
       "category": "Vegetables",
-      "price": "3,013,008",
+      "price": "2000",
       "image": "https://picsum.photos/seed/potato3/300/300",
       "description": "Golden, starchy potatoes, perfect for mashing, baking, or frying."
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "SweetRoot Carrots",
       "category": "Vegetables",
-      "price": "3,013,008",
+      "price": "2000",
       "image": "https://picsum.photos/seed/carrot4/300/300",
       "description": "Fresh, crunchy carrots with a natural sweetness, ideal for salads and cooking."
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "name": "TaterGold Potatoes",
       "category": "Vegetables",
-      "price": "3,013,008",
+      "price": "2000",
       "image": "https://picsum.photos/seed/potato5/300/300",
       "description": "Golden, starchy potatoes, perfect for mashing, baking, or frying."
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "name": "PureTuber Potatoes",
       "category": "Vegetables",
-      "price": "3,013,008",
+      "price": "2000",
       "image": "https://picsum.photos/seed/potato6/300/300",
       "description": "Pure, versatile potatoes, excellent for a variety of dishes."
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "name": "SweetLeaf Bananas",
       "category": "Fruits",
-      "price": "3,013,008",
+      "price": "2000",
       "image": "https://picsum.photos/seed/banana7/300/300",
       "description": "Sweet, ripe bananas, perfect for snacking or smoothies."
     },
@@ -60,7 +60,7 @@
       "id": 8,
       "name": "ButterGlow Spread",
       "category": "Dairy&Eggs",
-      "price": "3,013,008",
+      "price": "2000",
       "image": "https://picsum.photos/seed/butter8/300/300",
       "description": "Rich, creamy spread made from pure butter, ideal for cooking or baking."
     },
@@ -68,7 +68,7 @@
       "id": 9,
       "name": "Juicy Bloom Mangoes",
       "category": "Fruits",
-      "price": "3,013,008",
+      "price": "2000",
       "image": "https://picsum.photos/seed/mango9/300/300",
       "description": "Juicy, sweet mangoes with a fragrant aroma, perfect for desserts or salsas."
     },
@@ -76,7 +76,7 @@
       "id": 10,
       "name": "SunGlow Tomatoes",
       "category": "Vegetables",
-      "price": "3,013,008",
+      "price": "2000",
       "image": "https://picsum.photos/seed/tomato10/300/300",
       "description": "Vibrant, juicy tomatoes, ideal for salads, sauces, or sandwiches."
     },
