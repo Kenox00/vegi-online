@@ -62,6 +62,7 @@ const productReducer = (state, action) => {
   }
 };
 
+// eslint-disable-next-line react/prop-types
 const ProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(productReducer, initialState);
 
