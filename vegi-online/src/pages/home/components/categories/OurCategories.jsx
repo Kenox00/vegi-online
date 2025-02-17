@@ -9,6 +9,10 @@ import beverages from '../../../../assets/images/categories/beverages.png';
 import health from '../../../../assets/images/categories/health.png';
 import frozenfood from '../../../../assets/images/categories/frozenfood.png';
 import snacks from '../../../../assets/images/categories/snacks.png';
+import appsBg from '../../../../assets/images/categories/appsBg.png';
+import appleIcon from '../../../../assets/images/categories/appleIcon.png';
+import playstoreIcon from '../../../../assets/images/categories/playstoreIcon.png';
+
 
 
 const OurCategories = () => {
