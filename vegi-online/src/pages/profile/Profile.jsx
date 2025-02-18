@@ -2,22 +2,17 @@ import { useState } from "react";
 import Footer from "../../components/defaults/footer/Footer";
 import Navbar from "../../components/defaults/navbar/Navbar";
 import ProfileForm from "./components/profileForm";
-import profileIcon from "../../assets/images/Profile/profileIcon.png";
-import addressIcon from "../../assets/images/Profile/adressIcon.png";
-import paymentIcon from "../../assets/images/Profile/paymentIcon.png";
-import orders from "../../assets/images/Profile/orders.png";
+import { User, Wallet2, ShoppingBag, LogOut, BookText } from "lucide-react";
+import MyOrders from "./components/MyOrders";
 
 function Profile() {
   const [selectedPage, setSelectedPage] = useState("My Profile");
 
   const links = [
-    { id: 0, name: "My Profile", icon: profileIcon },
-    { id: 1, name: "Address Book", icon: addressIcon },
-    { id: 2, name: "My Payment Options", icon: paymentIcon },
-  ];
-  const links_2 = [
-    { id: 0, name: "My Delivered", icon: orders },
-    { id: 1, name: "Cancelled Orders", icon: orders },
+    { id: 0, name: "My Profile", icon: <User className="w-6 h-6" /> },
+    { id: 1, name: "Address Book", icon: <BookText className="w-6 h-6" /> },
+    { id: 2, name: "My Payment Options", icon: <Wallet2 className="w-6 h-6" /> },
+    { id: 3, name: "My Orders", icon: <ShoppingBag className="w-6 h-6" /> },
   ];
 
   const renderContent = () => {
@@ -28,10 +23,8 @@ function Profile() {
         return <div>Address Book Content</div>;
       case "My Payment Options":
         return <div>My Payment Content</div>;
-      case "My Delivered":
-        return <div>My Delivered Content</div>;
-      case "Cancelled Orders":
-        return <div>Cancelled Orders Content</div>;
+      case "My Orders":
+        return <MyOrders/>;
       default:
         return <ProfileForm />;
     }
@@ -55,56 +48,35 @@ function Profile() {
                 </option>
               ))}
             </optgroup>
-            <optgroup label="My Orders">
-              {links_2.map((link) => (
-                <option key={link.id} value={link.name}>
-                  {link.name}
-                </option>
-              ))}
-            </optgroup>
           </select>
         </div>
 
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col justify-between md:flex-row">
           {/* Sidebar for Medium Screens and Above */}
-          <div className="hidden md:flex flex-col px-3 gap-5 w-1/4">
-            <p className="font-semibold">Manage account</p>
-            <ul className="flex flex-col gap-2">
+          <div className="hidden md:flex flex-col w-fit border border-gray-950/6 p-4 h-[80vh]">
+            <h1 className="text-xl font-semibold mb-8">Manage My Account</h1>
+            <div className="flex flex-col flex-grow gap-2">
               {links.map((link) => (
-                <li
+                <div
                   key={link.id}
-                  className={`cursor-pointer px-5 py-1 flex text-sm items-center ${
-                    selectedPage === link.name
-                      ? "text-secondary border-l-3 border-secondary font-medium"
-                      : "text-gray-700"
-                  }`}
+                  className={`flex items-center gap-2 px-4 py-1 cursor-pointer text-sm max-w-[218px] h-10
+                    ${selectedPage === link.name 
+                      ? "text-secondary bg-primary/5" 
+                      : "text-gray-400"}
+                  `}
                   onClick={() => setSelectedPage(link.name)}
                 >
-                  <img src={link.icon} alt={link.name} className="w-4 h-4 mr-2" />
+                  {link.icon}
                   {link.name}
-                </li>
+                </div>
               ))}
-            </ul>
-            <div className="flex flex-col gap-5">
-              <p className="font-semibold">My Orders</p>
-              <ul className="flex flex-col gap-2">
-                {links_2.map((link) => (
-                  <li
-                    key={link.id}
-                    className={`cursor-pointer px-5 py-1 flex text-sm items-center ${
-                      selectedPage === link.name
-                        ? "text-secondary border-l-3 border-secondary font-medium"
-                        : "text-gray-700"
-                    }`}
-                    onClick={() => setSelectedPage(link.name)}
-                  >
-                    <img src={link.icon} alt={link.name} className="w-4 h-4 mr-2" />
-                    {link.name}
-                  </li>
-                ))}
-              </ul>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-1 cursor-pointer text-sm text-gray-400 mt-auto border-t border-gray-100">
+              <LogOut className="w-6 h-6" />
+              Log out
             </div>
           </div>
+
           {/* Main Content */}
           <div className="w-full md:w-3/4 mt-8 md:mt-0">
             {renderContent()}

@@ -1,80 +1,76 @@
 function ProfileForm() {
   return (
-    <div className="flex flex-col gap-4">
-      <h1 className="text-secondary font-medium text-lg">Edit Your Profile</h1>
-      
-      {/* Name Fields */}
-      <div className="flex flex-col">
-        <div className="flex flex-col md:flex-row gap-4">
-          <div className="inputFull">
-            <label htmlFor="firstName" className="text-sm">
-              First Name
-            </label>
+    <div className="max-w-2xl w-full space-y-8">
+      {/* Edit Profile Section */}
+      <section className="space-y-4">
+        <h2 className="text-secondary font-medium text-lg">Edit Your Profile</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <label htmlFor="firstName">First Name</label>
             <input
-              type="text"
+              id="firstName"
               name="firstName"
               placeholder="First Name"
-              className="inputField"
+              className="w-full inputField"
             />
           </div>
-          <div className="inputFull">
-            <label htmlFor="lastName" className="text-sm">
-              Last Name
-            </label>
+          <div className="space-y-2">
+            <label htmlFor="lastName">Last Name</label>
             <input
-              type="text"
+              id="lastName"
               name="lastName"
               placeholder="Last Name"
-              className="inputField"
+              className="w-full inputField"
             />
           </div>
         </div>
-      </div>
-      
-      {/* Password Change Fields */}
-      <h1 className="text-secondary font-medium text-lg">Password Changes</h1>
-      <div className="flex flex-col">
-        <div className="flex flex-col md:flex-row gap-4">
-          <div className="inputFull">
-            <label htmlFor="currentPassword" className="text-sm">
-              Current Password
-            </label>
+      </section>
+
+      {/* Password Change Section */}
+      <section className="space-y-4">
+        <h2 className="text-secondary font-medium text-lg">Password Changes</h2>
+        <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <label htmlFor="currentPassword">Current Password</label>
+              <input
+                id="currentPassword"
+                name="currentPassword"
+                type="password"
+                placeholder="Current Password"
+                className="w-full inputField"
+              />
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="newPassword">New Password</label>
+              <input
+                id="newPassword"
+                name="newPassword"
+                type="password"
+                placeholder="New Password"
+                className="w-full inputField"
+              />
+            </div>
+          </div>
+          <div className="space-y-2">
+            <label htmlFor="confirmPassword">Confirm New Password</label>
             <input
+              id="confirmPassword"
+              name="confirmPassword"
               type="password"
-              name="currentPassword"
-              placeholder="Current Password"
-              className="inputField"
-            />
-          </div>
-          <div className="inputFull">
-            <label htmlFor="newPassword" className="text-sm">
-              New Password
-            </label>
-            <input
-              type="password"
-              name="newPassword"
-              placeholder="New Password"
-              className="inputField"
+              placeholder="Confirm New Password"
+              className="w-full inputField"
             />
           </div>
         </div>
-        <div className="inputFull mt-5">
-          <label htmlFor="confirmPassword" className="text-sm">
-            Confirm New Password
-          </label>
-          <input
-            type="password"
-            name="confirmPassword"
-            placeholder="Confirm New Password"
-            className="inputField"
-          />
-        </div>
-      </div>
-      
+      </section>
+
       {/* Actions */}
-      <div className="flex flex-col md:flex-row justify-end gap-12 items-center">
-        <p className="font-medium cursor-pointer">Cancel</p>
-        <button className="bg-secondary text-white py-4 px-3 h-12 flex justify-center items-center w-full md:w-1/4 text-sm">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-end gap-4 md:gap-8 pt-4">
+        <button className="text-gray-600 font-medium hover:text-gray-800">
+          Cancel
+        </button>
+        <button className="w-full md:w-32 bg-secondary hover:bg-secondary/90 inputField">
           Save Changes
         </button>
       </div>
