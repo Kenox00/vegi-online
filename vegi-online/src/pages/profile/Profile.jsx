@@ -26,7 +26,7 @@ function Profile() {
       case "My Orders":
         return <MyOrders/>;
       default:
-        return <div>Default Content</div>;
+        return <ProfileForm/>;
     }
   };
 

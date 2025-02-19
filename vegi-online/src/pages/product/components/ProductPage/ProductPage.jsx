@@ -28,7 +28,7 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 flex gap-4 overflow-x-scroll scroll-smooth snap-x snap-mandatory scrollbar-hide h-[80vh]">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-gray-800">
           Recommended Products

@@ -67,9 +67,9 @@ function Collections() {
       <div className="md:hidden">
         <Slider {...settings}>
           {collections.map((collection) => (
-            <div key={collection.id} className="flex justify-center">
+            <div key={collection.id} className="flex justify-center items-center w-full">
               <div
-                className={`px-8 flex flex-col justify-between text-center items-center gap-2 w-full max-w-80 ${collection.bg} py-4  shadow-lg`}
+                className={`px-8 flex flex-col justify-between text-center items-center gap-2 w-fit ${collection.bg} py-4  shadow-lg`}
               >
                 <div className="py-6 flex flex-col gap-4">
                   <p className={`text-sm ${collection.label || "text-orange-400"}`}>

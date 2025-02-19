@@ -58,12 +58,12 @@ const Categories = () => {
   };
 
   return (
-    <div className="max-w-xs w-64 bg-white shadow-sm rounded-lg">
-      <div className="p-4 border-b border-gray-200">
+    <div className="max-w-xs w-64 bg-white shadow-sm rounded-lg ">
+      <div className="p-4 border-b border-gray-200 bg-white w-1/7">
         <h2 className="text-lg font-semibold text-gray-800">Categories</h2>
       </div>
       
-      <div className="divide-y divide-gray-100">
+      <div className="divide-y divide-gray-100 overflow-y-auto h-[80vh]">
         {Object.entries(categoryData).map(([category, items]) => (
           <div key={category} className="py-2">
             <button

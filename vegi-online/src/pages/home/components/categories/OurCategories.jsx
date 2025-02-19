@@ -64,7 +64,7 @@ const OurCategories = () => {
         {/* Categories Section */}
         <div className="flex-grow lg:max-w-[55%]">
           <div className="mb-6 sm:mb-8">
-            <h1 className="text-2xl sm:text-3xl font-bold text-teal-600">
+            <h1 className="text-2xl sm:text-3xl font-bold text-secondary">
               Our Categories
             </h1>
           </div>
