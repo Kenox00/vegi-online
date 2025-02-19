@@ -58,7 +58,7 @@ const FreshSales = () => {
         <Link to={`/products`}>
           <h2 className="text-xl font-semibold text-secondary">Flash Sales</h2>
         </Link>
-        <div className="hidden md:flex gap-2">
+        <div className=" md:flex gap-2">
           <button onClick={() => scrollCarousel(-1)} className="bg-white rounded-full p-2 shadow-sm hover:bg-gray-50 transition-colors">
             <ChevronLeft className="w-5 h-5 text-gray-600" />
           </button>
@@ -75,7 +75,7 @@ const FreshSales = () => {
           {allProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer snap-center min-w-[80%] sm:min-w-[50%] md:min-w-[33%] lg:min-w-[25%] xl:min-w-[20%]"
+              className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer snap-center min-w-[50%] sm:min-w-[50%] md:min-w-[33%] lg:min-w-[25%] xl:min-w-[20%]"
               onClick={() => handleProductClick(product)}
             >
               <div className="aspect-square mb-4">

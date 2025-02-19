@@ -5,20 +5,24 @@ import OurCategories from "./components/categories/OurCategories";
 import Collections from "./components/collections/Collections";
 import FreshSales from "./components/FreshSales/FreshSales";
 import Hero from "./components/Hero/Hero";
-import AllProduct from "./components/products/AllProduct";
+import { lazy, Suspense } from "react";
+const AllProduct = lazy(() => import("./components/products/AllProduct"));
+
 
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <Hero/>
-      <OurCategories />
-      <CallToAction />
-      <AllProduct />
-      <Collections />
-      <FreshSales />
-      <CallToAction />
-      <Footer />
+      <Suspense fallback={<p>loading...</p>}>
+        <Navbar />
+        <Hero />
+        <OurCategories />
+        <CallToAction />
+        <AllProduct />
+        <Collections />
+        <FreshSales />
+        <CallToAction />
+        <Footer />
+      </Suspense>
     </>
   );
 };
