@@ -1,5 +1,7 @@
 import { useProducts } from "../../../../hooks/useProducts";
 import promotion_1bg from "../../../../assets/images/Hero/bg.png";
+import banner1 from '../../../../assets/images/Hero/banner1.png';
+import banner2 from '../../../../assets/images/Hero/banner2.png';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,7 +22,7 @@ const Hero = () => {
       currentPrice: parsePrice(product?.price),
       discuntedPrice: parsePrice(product?.price * discount),
       bgColor: "bg-secondary",
-      image: product?.image,
+      image: banner1,
       callToAction: "Shop now",
       isMain: true,
     },
@@ -31,7 +33,7 @@ const Hero = () => {
       currentPrice: parsePrice(product?.price),
       discuntedPrice: parsePrice(product?.price * discount),
       bgColor: "bg-primary",
-      image: product?.image,
+      image: banner2,
       callToAction: "Shop now",
       isMain: false,
     },
@@ -68,7 +70,7 @@ const Hero = () => {
                 ${promo.isMain ? "lg:flex-row" : "flex-col text-center"} 
                 justify-between items-center`}
               style={{
-                background: "linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.3))",
+                background: "hsla(195, 96%, 9%, 1)"
               }}
             >
               <div className={`space-y-2 ${!promo.isMain && "w-full"}`}>

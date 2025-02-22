@@ -9,7 +9,7 @@ const ProductPage = () => {
   const { addToCart, removeFromCart } = useCart();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-    const [addedToCart, setAddedToCart] = useState([]);
+  const [addedToCart, setAddedToCart] = useState([]);
 
   // Memoized filtered products
   const filteredProducts = useMemo(() => {
@@ -19,15 +19,15 @@ const ProductPage = () => {
 
     return products.filter(product => {
       const matchesSearch = searchQuery ?
-        product.name.toLowerCase().includes(searchQuery) ||
-        product.description.toLowerCase().includes(searchQuery) ||
-        product.category.toLowerCase().includes(searchQuery) : true;
+        (product.name?.toLowerCase().includes(searchQuery) ||
+        product.description?.toLowerCase().includes(searchQuery) ||
+        product.category?.toLowerCase().includes(searchQuery)) : true;
 
       const matchesCategory = category ?
-        product.category.toLowerCase() === category : true;
+        product.category?.toLowerCase() === category : true;
 
       const matchesSubcategory = subcategory ?
-        product.subcategory.toLowerCase() === subcategory : true;
+        product.subcategory?.toLowerCase() === subcategory : true;
 
       return matchesSearch && matchesCategory && matchesSubcategory;
     });
@@ -37,7 +37,6 @@ const ProductPage = () => {
     setSelectedProduct(product);
     navigate(`/products/details?id=${product.id}`);
   };
-
 
   const handleAddToCart = (e, product) => { 
     e.stopPropagation();
