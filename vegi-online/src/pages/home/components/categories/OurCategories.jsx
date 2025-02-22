@@ -1,17 +1,17 @@
 import { useNavigate } from 'react-router-dom';
-import fruits from '../../../../assets/images/categories/fruits.png';
-import vegetables from '../../../../assets/images/categories/vegetables.png';
-import herbs from '../../../../assets/images/categories/herbs.png';
-import eggs from '../../../../assets/images/categories/eggs.png';
-import meat from '../../../../assets/images/categories/meat.png';
-import backery from '../../../../assets/images/categories/backery.png';
-import beverages from '../../../../assets/images/categories/beverages.png';
-import health from '../../../../assets/images/categories/health.png';
-import frozenfood from '../../../../assets/images/categories/frozenfood.png';
-import snacks from '../../../../assets/images/categories/snacks.png';
-import appsBg from '../../../../assets/images/categories/appsBg.png';
-import appleIcon from '../../../../assets/images/categories/appleIcon.png';
-import playstoreIcon from '../../../../assets/images/categories/playStoreIcon.png';
+import fruits from '/images/categories/fruits.png'
+import vegetables from '/images/categories/vegetables.png';
+import herbs from '/images/categories/herbs.png';
+import eggs from '/images/categories/eggs.png';
+import meat from '/images/categories/meat.png';
+import backery from '/images/categories/backery.png';
+import beverages from '/images/categories/beverages.png';
+import health from '/images/categories/health.png';
+import frozenfood from '/images/categories/frozenfood.png';
+import snacks from '/images/categories/snacks.png';
+import appsBg from '/images/categories/appsBg.png';
+import appleIcon from '/images/categories/appleIcon.png';
+import playstoreIcon from '/images/categories/playStoreIcon.png';
 
 
 

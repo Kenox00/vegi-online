@@ -1,6 +1,6 @@
-import truckImg from '../../assets/images/cta/truck.png';
-import phoneImg from '../../assets/images/cta/phone.png';
-import paymentImg from '../../assets/images/cta/payment.png';
+import truckImg from '/images/cta/truck.png';
+import phoneImg from '/images/cta/phone.png';
+import paymentImg from '/images/cta/payment.png';
 
 const CallToAction = () => {
   const features = [

@@ -1,7 +1,7 @@
 import { useProducts } from "../../../../hooks/useProducts";
-import promotion_1bg from "../../../../assets/images/Hero/bg.png";
-import banner1 from '../../../../assets/images/Hero/banner1.png';
-import banner2 from '../../../../assets/images/Hero/banner2.png';
+import promotion_1bg from "/images/Hero/bg.png";
+import banner1 from '/images/Hero/banner1.png';
+import banner2 from '/images/Hero/banner2.png';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

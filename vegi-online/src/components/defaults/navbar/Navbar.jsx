@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Search, Menu, X, Phone } from "lucide-react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import logo from "../../../assets/images/navbar/Logo.png";
-import cart from "../../../assets/images/navbar/cart.png";
-import user from "../../../assets/images/navbar/user.png";
-import flower from "../../../assets/images/navbar/flower.png";
+import logo from "/images/navbar/Logo.png";
+import cart from "/images/navbar/cart.png";
+import user from "/images/navbar/user.png";
+import flower from "/images/navbar/flower.png";
 import { useCart } from "../../../hooks/useCart";
 import UserDropdown from "./UserDropdown";
 import CategoriesDropdown from "./CategoriesDropdown";

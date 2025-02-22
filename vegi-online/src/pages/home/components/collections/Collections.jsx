@@ -1,5 +1,5 @@
-import wine1 from "../../../../assets/images/Collections/wines1.png";
-import heineken from "../../../../assets/images/Collections/heineken.png";
+import wine1 from "/images/Collections/wines1.png";
+import heineken from "/images/Collections/heineken.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

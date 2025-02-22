@@ -1,11 +1,11 @@
 import { Facebook, Linkedin, Instagram, MapPin, Mail, Phone } from 'lucide-react';
-import logo from '../../../assets/images/footer/footerlogo.png';
-import appstore from '../../../assets/images/footer/appstore.png';
-import playstore from '../../../assets/images/footer/playstore.png';
-import mtn from '../../../assets/images/footer/mtn.png';
-import airtel from '../../../assets/images/footer/airtel.png';
-import mastercard from '../../../assets/images/footer/mastercard.png';
-import paypal from '../../../assets/images/footer/paypal.png';
+import logo from '/images/footer/footerlogo.png';
+import appstore from '/images/footer/appstore.png';
+import playstore from '/images/footer/playstore.png';
+import mtn from '/images/footer/mtn.png';
+import airtel from '/images/footer/airtel.png';
+import mastercard from '/images/footer/mastercard.png';
+import paypal from '/images/footer/paypal.png';
 
 const Footer = () => {
   return (

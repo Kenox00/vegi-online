@@ -1,9 +1,9 @@
 import { MinusCircle, PlusCircle, XCircle } from "lucide-react";
 import { Link } from 'react-router-dom';
-import mtn from "../../../assets/images/footer/mtn.png";
-import airtel from "../../../assets/images/footer/airtel.png";
-import mastercard from "../../../assets/images/footer/mastercard.png";
-import paypal from "../../../assets/images/footer/paypal.png";
+import mtn from "/images/footer/mtn.png";
+import airtel from "/images/footer/airtel.png";
+import mastercard from "/images/footer/mastercard.png";
+import paypal from "/images/footer/paypal.png";
 import { useCart } from "../../../hooks/useCart";
 
 const Cart = () => {

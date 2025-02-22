@@ -5,7 +5,7 @@
           "name": "Juicy Glow Apples",
           "category": "Fruits",
           "price": "2000",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0009.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0009.jpg",
           "description": "Crisp, sweet apples with a radiant glow, perfect for snacking or baking."
       },
       {
@@ -13,7 +13,7 @@
           "name": "SweetRoot Carrots",
           "category": "Vegetables",
           "price": "2000",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0009.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0009.jpg",
           "description": "Fresh, crunchy carrots with a natural sweetness, ideal for salads and cooking."
       },
       {
@@ -21,7 +21,7 @@
           "name": "TaterGold Potatoes",
           "category": "Vegetables",
           "price": "2000",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0008.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0008.jpg",
           "description": "Golden, starchy potatoes, perfect for mashing, baking, or frying."
       },
       {
@@ -29,7 +29,7 @@
           "name": "SweetRoot Carrots",
           "category": "Vegetables",
           "price": "2000",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0007.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0007.jpg",
           "description": "Fresh, crunchy carrots with a natural sweetness, ideal for salads and cooking."
       },
       {
@@ -37,7 +37,7 @@
           "name": "TaterGold Potatoes",
           "category": "Vegetables",
           "price": "2000",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0065.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0065.jpg",
           "description": "Golden, starchy potatoes, perfect for mashing, baking, or frying."
       },
       {
@@ -45,7 +45,7 @@
           "name": "PureTuber Potatoes",
           "category": "Vegetables",
           "price": "2000",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0056.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0056.jpg",
           "description": "Pure, versatile potatoes, excellent for a variety of dishes."
       },
       {
@@ -53,7 +53,7 @@
           "name": "SweetLeaf Bananas",
           "category": "Fruits",
           "price": "2000",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0007.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0007.jpg",
           "description": "Sweet, ripe bananas, perfect for snacking or smoothies."
       },
       {
@@ -61,7 +61,7 @@
           "name": "ButterGlow Spread",
           "category": "Dairy&Eggs",
           "price": "2000",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0008.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0008.jpg",
           "description": "Rich, creamy spread made from pure butter, ideal for cooking or baking."
       },
       {
@@ -69,7 +69,7 @@
           "name": "Juicy Bloom Mangoes",
           "category": "Fruits",
           "price": "2000",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0009.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0009.jpg",
           "description": "Juicy, sweet mangoes with a fragrant aroma, perfect for desserts or salsas."
       },
       {
@@ -77,7 +77,7 @@
           "name": "SunGlow Tomatoes",
           "category": "Vegetables",
           "price": "2000",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0010.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0010.jpg",
           "description": "Vibrant, juicy tomatoes, ideal for salads, sauces, or sandwiches."
       },
       {
@@ -86,7 +86,7 @@
           "category": "Vegetables",
           "subcategory": "Leafy Greens",
           "price": "2,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0011.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0011.jpg",
           "description": "Fresh, leafy spinach, perfect for salads, smoothies, or cooking."
       },
       {
@@ -95,7 +95,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Yogurt",
           "price": "1,234,567",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0012.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0012.jpg",
           "description": "Smooth, creamy yogurt, perfect for breakfast or snacks."
       },
       {
@@ -104,7 +104,7 @@
           "category": "Fruits",
           "subcategory": "Fresh Fruits",
           "price": "2,890,123",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0013.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0013.jpg",
           "description": "Juicy, sweet oranges with a bright citrus flavor, perfect for juicing or snacking."
       },
       {
@@ -113,7 +113,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Eggs",
           "price": "1,789,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0014.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0014.jpg",
           "description": "Fresh, organic eggs, ideal for breakfast or baking."
       },
       {
@@ -122,7 +122,7 @@
           "category": "Vegetables",
           "subcategory": "Leafy Greens",
           "price": "1,456,789",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0015.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0015.jpg",
           "description": "Crisp, fresh lettuce, perfect for salads or sandwiches."
       },
       {
@@ -131,7 +131,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,234,567",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0016.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0016.jpg",
           "description": "Sweet, juicy strawberries, perfect for desserts or snacking."
       },
       {
@@ -140,7 +140,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "4,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0017.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0017.jpg",
           "description": "Rich, creamy Swiss cheese, perfect for sandwiches or snacking."
       },
       {
@@ -149,7 +149,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "1,678,901",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0018.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0018.jpg",
           "description": "Fresh, crisp cucumber, ideal for salads or snacking."
       },
       {
@@ -158,7 +158,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0019.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0019.jpg",
           "description": "Sweet, juicy pineapple with a tropical flavor, perfect for desserts or grilling."
       },
       {
@@ -167,7 +167,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Milk & Cream",
           "price": "2,345,678",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0020.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0020.jpg",
           "description": "Pure, fresh milk, ideal for drinking or cooking."
       },
       {
@@ -176,7 +176,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "2,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0021.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0021.jpg",
           "description": "Fresh, nutrient-rich broccoli, perfect for steaming or roasting."
       },
       {
@@ -185,7 +185,7 @@
           "category": "Fruits",
           "subcategory": "Fresh Fruits",
           "price": "3,456,789",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0022.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0022.jpg",
           "description": "Sweet, juicy grapes, perfect for snacking or desserts."
       },
       {
@@ -194,7 +194,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Butter & Margarine",
           "price": "2,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0023.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0023.jpg",
           "description": "Rich, creamy butter, ideal for cooking or baking."
       },
       {
@@ -203,7 +203,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "2,012,345",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0024.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0024.jpg",
           "description": "Fresh, vibrant bell peppers, perfect for salads or stir-fries."
       },
       {
@@ -212,7 +212,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,678,901",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0024.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0024.jpg",
           "description": "Sweet, juicy papaya with a tropical flavor, perfect for snacking or desserts."
       },
       {
@@ -221,7 +221,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "3,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0026.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0026.jpg",
           "description": "Rich, sharp cheddar cheese, perfect for sandwiches or snacking."
       },
       {
@@ -230,7 +230,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "1,345,678",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0027.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0027.jpg",
           "description": "Fresh, crunchy celery, ideal for salads or snacking."
       },
       {
@@ -239,7 +239,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0028.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0028.jpg",
           "description": "Sweet, juicy peaches, perfect for desserts or snacking."
       },
       {
@@ -248,7 +248,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Yogurt",
           "price": "2,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0029.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0029.jpg",
           "description": "Thick, creamy Greek yogurt, perfect for breakfast or snacks."
       },
       {
@@ -257,7 +257,7 @@
           "category": "Meat & Seafood",
           "subcategory": "Fresh Vegetables",
           "price": "1,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0030.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0030.jpg",
           "description": "Fresh, versatile zucchini, ideal for grilling or baking."
       },
       {
@@ -266,7 +266,7 @@
           "category": "Fruits",
           "subcategory": "Exotic Fruits",
           "price": "2,345,678",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0031.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0031.jpg",
           "description": "Sweet, tangy kiwi, perfect for snacking or desserts."
       },
       {
@@ -275,7 +275,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Milk & Cream",
           "price": "2,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0032.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0032.jpg",
           "description": "Rich, fresh cream, ideal for cooking or desserts."
       },
       {
@@ -284,7 +284,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "3,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0033.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0033.jpg",
           "description": "Fresh, tender asparagus, perfect for grilling or roasting."
       },
       {
@@ -293,7 +293,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "2,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0034.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0034.jpg",
           "description": "Sweet, juicy plums, perfect for snacking or desserts."
       },
       {
@@ -302,7 +302,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "3,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0035.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0035.jpg",
           "description": "Smooth, creamy mozzarella cheese, ideal for pizzas or salads."
       },
       {
@@ -311,7 +311,7 @@
           "category": "Health & Wellness",
           "subcategory": "Leafy Greens",
           "price": "2,345,678",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0036.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0036.jpg",
           "description": "Fresh, nutrient-rich Brussels sprouts, perfect for roasting or steaming."
       },
       {
@@ -320,7 +320,7 @@
           "category": "Fruits",
           "subcategory": "Fresh Fruits",
           "price": "2,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0037.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0037.jpg",
           "description": "Sweet, juicy pears, perfect for snacking or desserts."
       },
       {
@@ -329,7 +329,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Milk & Cream",
           "price": "2,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0038.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0038.jpg",
           "description": "Nutritious, organic soy milk, ideal for drinking or cooking."
       },
       {
@@ -338,7 +338,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "2,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0039.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0039.jpg",
           "description": "Tender, fresh cauliflower, perfect for roasting or steaming."
       },
       {
@@ -347,7 +347,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0040.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0040.jpg",
           "description": "Sweet, juicy cherries, perfect for snacking or desserts."
       },
       {
@@ -356,7 +356,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Milk & Cream",
           "price": "2,345,678",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0041.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0041.jpg",
           "description": "Nutritious, organic almond milk, ideal for drinking or cooking."
       },
       {
@@ -365,7 +365,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "1,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0042.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0042.jpg",
           "description": "Fresh, crisp green beans, perfect for steaming or stir-frying."
       },
       {
@@ -374,7 +374,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0043.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0043.jpg",
           "description": "Sweet, juicy blueberries, perfect for snacking or desserts."
       },
       {
@@ -383,7 +383,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "2,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0044.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0044.jpg",
           "description": "Smooth, creamy cottage cheese, ideal for snacking or salads."
       },
       {
@@ -392,7 +392,7 @@
           "category": "Vegetables",
           "subcategory": "Root Vegetables",
           "price": "1,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0045.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0045.jpg",
           "description": "Fresh, crisp radishes, perfect for salads or snacking."
       },
       {
@@ -401,7 +401,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,345,678",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0046.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0046.jpg",
           "description": "Sweet, juicy raspberries, perfect for snacking or desserts."
       },
       {
@@ -410,7 +410,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Milk & Cream",
           "price": "2,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0047.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0047.jpg",
           "description": "Nutritious, organic oat milk, ideal for drinking or cooking."
       },
       {
@@ -419,7 +419,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "2,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0048.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0048.jpg",
           "description": "Fresh, tender artichokes, perfect for steaming or grilling."
       },
       {
@@ -428,7 +428,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0049.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0049.jpg",
           "description": "Sweet, juicy blackberries, perfect for snacking or desserts."
       },
       {
@@ -437,7 +437,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "4,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0050.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0050.jpg",
           "description": "Rich, creamy Gouda cheese, ideal for snacking or cooking."
       },
       {
@@ -446,7 +446,7 @@
           "category": "Fruits",
           "subcategory": "Fresh Fruits",
           "price": "3,013,008",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0001.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0001.jpg",
           "description": "Crisp, sweet apples with a radiant glow, perfect for snacking or baking."
       },
       {
@@ -455,7 +455,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "4,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0050.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0050.jpg",
           "description": "Rich, creamy Gouda cheese, ideal for snacking or cooking."
       },
       {
@@ -464,7 +464,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,456,789",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0051.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0051.jpg",
           "description": "Sweet, juicy melon with a refreshing taste, perfect for summer salads."
       },
       {
@@ -473,7 +473,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "1,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0052.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0052.jpg",
           "description": "Crisp, sweet snap peas, ideal for snacking or stir-fries."
       },
       {
@@ -482,7 +482,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Yogurt",
           "price": "1,345,678",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0053.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0053.jpg",
           "description": "Creamy yogurt with live cultures, great for digestive health."
       },
       {
@@ -491,7 +491,7 @@
           "category": "Fruits",
           "subcategory": "Exotic Fruits",
           "price": "3,012,345",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0054.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0054.jpg",
           "description": "Sweet and tangy golden kiwi, packed with vitamins."
       },
       {
@@ -500,7 +500,7 @@
           "category": "Vegetables",
           "subcategory": "Root Vegetables",
           "price": "1,234,567",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0055.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0055.jpg",
           "description": "Nutrient-rich beets, perfect for roasting or juicing."
       },
       {
@@ -509,7 +509,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Milk & Cream",
           "price": "2,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0056.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0056.jpg",
           "description": "Creamy coconut milk for cooking or smoothies."
       },
       {
@@ -518,7 +518,7 @@
           "category": "Frozen Foods",
           "subcategory": "Citrus Fruits",
           "price": "2,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0057.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0057.jpg",
           "description": "Tangy grapefruit with vibrant red flesh."
       },
       {
@@ -527,7 +527,7 @@
           "category": "Frozen Foods",
           "subcategory": "Leafy Greens",
           "price": "1,890,123",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0058.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0058.jpg",
           "description": "Oven-baked kale chips with sea salt."
       },
       {
@@ -536,7 +536,7 @@
           "category": "Frozen Foods",
           "subcategory": "Cheese",
           "price": "4,234,567",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0059.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0059.jpg",
           "description": "Soft-ripened French brie cheese."
       },
       {
@@ -545,7 +545,7 @@
           "category": "Fruits",
           "subcategory": "Exotic Fruits",
           "price": "4,012,345",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0060.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0060.jpg",
           "description": "Vibrant pink fruit with mild sweetness."
       },
       {
@@ -554,7 +554,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "2,345,678",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0061.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0061.jpg",
           "description": "Colorful tomatoes with rich flavor."
       },
       {
@@ -563,7 +563,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "3,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0062.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0062.jpg",
           "description": "Crumbly salty cheese for salads."
       },
       {
@@ -572,7 +572,7 @@
           "category": "Fruits",
           "subcategory": "Exotic Fruits",
           "price": "3,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0063.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0063.jpg",
           "description": "Tropical fruit with intense flavor."
       },
       {
@@ -581,7 +581,7 @@
           "category": "Vegetables",
           "subcategory": "Leafy Greens",
           "price": "1,456,789",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0064.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0064.jpg",
           "description": "Tender young spinach leaves."
       },
       {
@@ -590,7 +590,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Milk & Cream",
           "price": "2,012,345",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0065.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0065.jpg",
           "description": "Light and fluffy dessert topping."
       },
       {
@@ -599,7 +599,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,234,567",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0066.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0066.jpg",
           "description": "Jewel-like seeds bursting with juice."
       },
       {
@@ -608,7 +608,7 @@
           "category": "Vegetables",
           "subcategory": "Leafy Greens",
           "price": "1,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0067.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0067.jpg",
           "description": "Vibrant cabbage for slaws and salads."
       },
       {
@@ -617,7 +617,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "3,456,789",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0068.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0068.jpg",
           "description": "Tangy soft cheese for spreads."
       },
       {
@@ -626,7 +626,7 @@
           "category": "Fruits",
           "subcategory": "Exotic Fruits",
           "price": "3,890,123",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0069.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0069.jpg",
           "description": "Tropical fruit with star-shaped slices."
       },
       {
@@ -635,7 +635,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "1,678,901",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0070.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0070.jpg",
           "description": "Spicy peppers for salsas and dishes."
       },
       {
@@ -644,7 +644,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Milk & Cream",
           "price": "1,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0071.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0071.jpg",
           "description": "Creamy topping for baked potatoes."
       },
       {
@@ -653,7 +653,7 @@
           "category": "Fruits",
           "subcategory": "Exotic Fruits",
           "price": "4,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0072.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0072.jpg",
           "description": "Sweet floral tropical fruit."
       },
       {
@@ -662,7 +662,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "1,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0073.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0073.jpg",
           "description": "Green pods for stews and frying."
       },
       {
@@ -671,7 +671,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Milk & Cream",
           "price": "2,345,678",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0074.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0074.jpg",
           "description": "Nutty dairy-free milk alternative."
       },
       {
@@ -680,7 +680,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0075.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0075.jpg",
           "description": "Sweet autumn fruit with smooth texture."
       },
       {
@@ -689,7 +689,7 @@
           "category": "Vegetables",
           "subcategory": "Leafy Greens",
           "price": "1,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0075.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0075.jpg",
           "description": "Asian green for stir-fries."
       },
       {
@@ -698,7 +698,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "2,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0077.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0077.jpg",
           "description": "Creamy cheese for lasagna fillings."
       },
       {
@@ -707,7 +707,7 @@
           "category": "Fruits",
           "subcategory": "Exotic Fruits",
           "price": "3,012,345",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0078.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0078.jpg",
           "description": "Tropical fruit with pink flesh."
       },
       {
@@ -716,7 +716,7 @@
           "category": "Vegetables",
           "subcategory": "Root Vegetables",
           "price": "1,234,567",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0079.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0079.jpg",
           "description": "Mild radish for pickling or salads."
       },
       {
@@ -725,7 +725,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Yogurt",
           "price": "2,456,789",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0080.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0080.jpg",
           "description": "Fermented probiotic drink."
       },
       {
@@ -734,7 +734,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "2,890,123",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0081.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0081.jpg",
           "description": "Orange-fleshed melon for summer."
       },
       {
@@ -743,7 +743,7 @@
           "category": "Vegetables",
           "subcategory": "Leafy Greens",
           "price": "2,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0082.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0082.jpg",
           "description": "Bitter greens for salads."
       },
       {
@@ -752,7 +752,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "3,678,901",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0083.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0083.jpg",
           "description": "Spicy cheese with jalape\u00f1o bits."
       },
       {
@@ -761,7 +761,7 @@
           "category": "Fruits",
           "subcategory": "Citrus Fruits",
           "price": "3,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0084.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0084.jpg",
           "description": "Tiny edible citrus fruits."
       },
       {
@@ -770,7 +770,7 @@
           "category": "Vegetables",
           "subcategory": "Root Vegetables",
           "price": "1,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0085.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0085.jpg",
           "description": "Sweet root vegetable for stews."
       },
       {
@@ -779,7 +779,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Milk & Cream",
           "price": "3,456,789",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0086.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0086.jpg",
           "description": "Thick cream for scones."
       },
       {
@@ -788,7 +788,7 @@
           "category": "Fruits",
           "subcategory": "Citrus Fruits",
           "price": "2,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0037.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0037.jpg",
           "description": "Citrus with deep red flesh."
       },
       {
@@ -797,7 +797,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "1,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0028.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0028.jpg",
           "description": "Mild squash for soups."
       },
       {
@@ -806,7 +806,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "4,012,345",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0039.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0039.jpg",
           "description": "Grillable cheese with salty taste."
       },
       {
@@ -815,7 +815,7 @@
           "category": "Fruits",
           "subcategory": "Exotic Fruits",
           "price": "4,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0040.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0040.jpg",
           "description": "Creamy tropical fruit."
       },
       {
@@ -824,7 +824,7 @@
           "category": "Vegetables",
           "subcategory": "Fresh Vegetables",
           "price": "1,678,901",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0051.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0051.jpg",
           "description": "Anise-flavored bulb for salads."
       },
       {
@@ -833,7 +833,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Yogurt",
           "price": "2,345,678",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0072.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0072.jpg",
           "description": "Icelandic yogurt with high protein."
       },
       {
@@ -842,7 +842,7 @@
           "category": "Fruits",
           "subcategory": "Seasonal Fruits",
           "price": "3,123,456",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0073.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0073.jpg",
           "description": "Sweet fruit with edible seeds."
       },
       {
@@ -851,7 +851,7 @@
           "category": "Vegetables",
           "subcategory": "Root Vegetables",
           "price": "1,789,012",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0054.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0054.jpg",
           "description": "Crisp vegetable for slaws."
       },
       {
@@ -860,7 +860,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "4,234,567",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0015.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0015.jpg",
           "description": "Italian cream cheese for desserts."
       },
       {
@@ -869,7 +869,7 @@
           "category": "Fruits",
           "subcategory": "Exotic Fruits",
           "price": "3,456,789",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0026.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0026.jpg",
           "description": "Sweet fruit from cactus plants."
       },
       {
@@ -878,7 +878,7 @@
           "category": "Vegetables",
           "subcategory": "Leafy Greens",
           "price": "1,234,567",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0037.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0037.jpg",
           "description": "Peppery greens for sandwiches."
       },
       {
@@ -887,7 +887,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "2,901,234",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0038.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0038.jpg",
           "description": "Fresh dairy product similar to cottage cheese."
       },
       {
@@ -896,7 +896,7 @@
           "category": "Fruits",
           "subcategory": "Citrus Fruits",
           "price": "4,012,345",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0059.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0059.jpg",
           "description": "Japanese citrus with unique aroma."
       },
       {
@@ -905,7 +905,7 @@
           "category": "Dairy & Eggs",
           "subcategory": "Cheese",
           "price": "4,567,890",
-          "image": "../src/assets/images/productImages/IMG-20210719-WA0010.jpg",
+          "image": "/images/productImages/IMG-20210719-WA0010.jpg",
           "description": "Soft, creamy Camembert cheese, ideal for gourmet dishes."
       }
   ]
