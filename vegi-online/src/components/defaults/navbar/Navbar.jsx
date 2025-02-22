@@ -187,7 +187,7 @@ const Navbar = () => {
               </ul>
             </nav>
 
-            <button className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 transition-colors text-white px-4 py-2">
+            <button className="flex items-center gap-2 bg-secondary  transition-colors text-white px-4 py-2">
               <img src={flower} alt="Flower" className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="whitespace-nowrap">Gifts & Flowers</span>
             </button>
@@ -197,7 +197,7 @@ const Navbar = () => {
 
       {/* Mobile Gift & Flowers Button */}
       <div className="lg:hidden px-4 py-3 border-t">
-        <button className="w-full flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 transition-colors text-white px-4 py-2 rounded">
+        <button className="w-full flex items-center justify-center gap-2 bg-secondary  transition-colors text-white px-4 py-2 rounded">
           <img src={flower} alt="Flower" className="w-4 h-4 sm:w-5 sm:h-5" />
           <span>Gifts & Flowers</span>
         </button>
