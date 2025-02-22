@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { useProducts } from "../../../../hooks/useProducts";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -9,6 +9,7 @@ const ProductPage = () => {
   const { addToCart, removeFromCart } = useCart();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+    const [addedToCart, setAddedToCart] = useState([]);
 
   // Memoized filtered products
   const filteredProducts = useMemo(() => {
@@ -37,14 +38,17 @@ const ProductPage = () => {
     navigate(`/products/details?id=${product.id}`);
   };
 
-  const handleAddToCart = (e, product) => {
+
+  const handleAddToCart = (e, product) => { 
     e.stopPropagation();
     addToCart(product, 1);
+    setAddedToCart([...addedToCart, product.id]);
   };
 
   const handleRemoveFromCart = (e, productId) => {
     e.stopPropagation();
     removeFromCart(productId);
+    setAddedToCart(addedToCart.filter((id) => id !== productId));
   };
 
   const getHeaderText = () => {
@@ -57,7 +61,7 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 flex gap-4 overflow-x-scroll scroll-smooth snap-x snap-mandatory scrollbar-hide h-[80vh]">
+    <div className="container mx-auto px-4 py-8 flex flex-col gap-4 overflow-x-scroll scroll-smooth snap-x snap-mandatory scrollbar-hide h-[80vh]">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-gray-800">
           {getHeaderText()}
@@ -96,28 +100,28 @@ const ProductPage = () => {
                 <p className="text-secondary text-sm">{product.category}</p>
                 <p className="font-medium text-gray-800">{product.name}</p>
                 <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-1">
-                    <span className="font-semibold">{product.price}</span>
-                    <span className="p-1 text-sm text-black bg-gray-100 rounded-md">
-                      Rwf
-                    </span>
-                  </div>
-                  {product.inCart ? (
-                    <button
-                      className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
-                      onClick={(e) => handleRemoveFromCart(e, product.id)}
-                    >
-                      X
-                    </button>
-                  ) : (
-                    <button
-                      className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
-                      onClick={(e) => handleAddToCart(e, product)}
-                    >
-                      +
-                    </button>
-                  )}
+                <div className="flex items-center gap-1">
+                  <span className="font-semibold">{product.price}</span>
+                  <span className="p-1 text-sm text-black bg-gray-100 rounded-md">
+                    Rwf
+                  </span>
                 </div>
+                {addedToCart.includes(product.id) ? (
+                  <button
+                    className="text-secondary border border-secondary rounded-md w-8 h-8 flex items-center justify-center hover:bg-tertiary hover:text-white transition-colors"
+                    onClick={(e) => handleRemoveFromCart(e, product.id)}
+                  >
+                    X
+                  </button>
+                ) : (
+                  <button
+                    className="text-secondary border border-secondary rounded-md w-8 h-8 flex items-center justify-center hover:bg-tertiary hover:text-white transition-colors"
+                    onClick={(e) => handleAddToCart(e, product)}
+                  >
+                    +
+                  </button>
+                )}
+              </div>
               </div>
             </div>
           ))}

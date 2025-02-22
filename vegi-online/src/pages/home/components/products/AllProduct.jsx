@@ -61,7 +61,7 @@ const AllProduct = () => {
               <h1 className="text-xl font-semibold text-secondary">
                 All Products
               </h1>
-              <span className="text-primary">{allProducts.length}</span>
+              <span className="text-secondary">{allProducts.length}</span>
             </div>
           </Link>
           <div className="flex flex-wrap gap-3">
@@ -71,7 +71,7 @@ const AllProduct = () => {
                 onClick={() => handleCategoryFilter(category)}
                 className={`px-4 py-2 rounded-md text-sm transition-colors ${
                   category === selectedCategory
-                    ? "bg-primary text-white"
+                    ? "bg-secondary text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -109,14 +109,14 @@ const AllProduct = () => {
                 </div>
                 {addedToCart.includes(product.id) ? (
                   <button
-                    className="text-primary border borde-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                    className="text-secondary border border-secondary rounded-md w-8 h-8 flex items-center justify-center hover:bg-tertiary hover:text-white transition-colors"
                     onClick={(e) => handleRemoveFromCart(e, product.id)}
                   >
                     X
                   </button>
                 ) : (
                   <button
-                    className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                    className="text-secondary border border-secondary rounded-md w-8 h-8 flex items-center justify-center hover:bg-tertiary hover:text-white transition-colors"
                     onClick={(e) => handleAddToCart(e, product)}
                   >
                     +

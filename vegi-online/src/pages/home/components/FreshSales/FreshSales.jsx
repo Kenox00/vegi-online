@@ -91,14 +91,14 @@ const FreshSales = () => {
                   </div>
                   {addedToCart.includes(product.id) ? (
                     <button
-                      className="text-primary border borde-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                      className="text-secondary border border-secondary rounded-md w-8 h-8 flex items-center justify-center hover:bg-tertiary hover:text-white transition-colors"
                       onClick={(e) => handleRemoveFromCart(e, product.id)}
                     >
                       X
                     </button>
                   ) : (
                     <button
-                      className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                      className="text-secondary border border-secondary rounded-md w-8 h-8 flex items-center justify-center hover:bg-tertiary hover:text-white transition-colors"
                       onClick={(e) => handleAddToCart(e, product)}
                     >
                       +

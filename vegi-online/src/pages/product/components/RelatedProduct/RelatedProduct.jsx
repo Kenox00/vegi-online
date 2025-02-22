@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useProducts } from '../../../../hooks/useProducts';
 import { useNavigate } from 'react-router-dom';
@@ -6,10 +6,9 @@ import { useCart } from '../../../../hooks/useCart';
 
 const RelatedProduct = () => {
   const { products: allProducts, selectedProduct, setSelectedProduct } = useProducts();
-  const { addToCart, removeFromCart } = useCart();
-  const [startIndex, setStartIndex] = useState(0);
-  const [addedToCart, setAddedToCart] = useState([]);
+  const { addToCart, removeFromCart, cartItems } = useCart();
   const navigate = useNavigate();
+  const carouselRef = useRef(null);
 
   // Filter related products based on the selected product's category
   const relatedProducts = useMemo(() => {
@@ -29,42 +28,24 @@ const RelatedProduct = () => {
   const handleAddToCart = (e, product) => {
     e.stopPropagation();
     addToCart(product, 1);
-    setAddedToCart([...addedToCart, product.id]);
   };
 
   const handleRemoveFromCart = (e, productId) => {
     e.stopPropagation();
     removeFromCart(productId);
-    setAddedToCart(addedToCart.filter(id => id !== productId));
+  };
+
+  const scrollCarousel = (direction) => {
+    if (carouselRef.current) {
+      const scrollAmount = carouselRef.current.clientWidth;
+      carouselRef.current.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
   };
 
   // Handle edge case when there are no related products
   if (relatedProducts.length === 0) {
     return null;
   }
-
-  const nextSlide = () => {
-    setStartIndex((prevIndex) => 
-      prevIndex + 1 >= relatedProducts.length ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setStartIndex((prevIndex) => 
-      prevIndex - 1 < 0 ? relatedProducts.length - 1 : prevIndex - 1
-    );
-  };
-
-  // Calculate visible products based on screen size
-  const getVisibleProducts = () => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth >= 1536) return 5; // 2xl
-    if (screenWidth >= 1280) return 5; // xl
-    if (screenWidth >= 1024) return 4; // lg
-    if (screenWidth >= 768) return 3; // md
-    if (screenWidth >= 640) return 2; // sm
-    return 1; // xs
-  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -76,16 +57,16 @@ const RelatedProduct = () => {
           </p>
         </div>
         
-        {relatedProducts.length > getVisibleProducts() && (
+        {relatedProducts.length > 1 && (
           <div className="flex gap-2">
             <button 
-              onClick={prevSlide}
+              onClick={() => scrollCarousel(-1)}
               className="bg-white rounded-full p-2 shadow-sm hover:bg-gray-50 transition-colors"
             >
               <ChevronLeft className="w-5 h-5 text-gray-600" />
             </button>
             <button 
-              onClick={nextSlide}
+              onClick={() => scrollCarousel(1)}
               className="bg-white rounded-full p-2 shadow-sm hover:bg-gray-50 transition-colors"
             >
               <ChevronRight className="w-5 h-5 text-gray-600" />
@@ -95,54 +76,47 @@ const RelatedProduct = () => {
       </div>
 
       <div className="relative">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {relatedProducts.map((product, index) => {
-            const position = (index - startIndex + relatedProducts.length) % relatedProducts.length;
-            const isVisible = position < getVisibleProducts();
-
-            if (!isVisible) return null;
-
-            return (
-              <div
-                key={product.id}
-                className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
-                onClick={() => handleProductClick(product)}
-              >
-                <div className="aspect-square mb-4">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <p className="text-gray-500 text-sm">{product.category}</p>
-                  <p className="font-medium text-gray-800 line-clamp-1">{product.name}</p>
-                  <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-1">
-                      <span className="font-semibold">{product.price}</span>
-                      <span className="p-1 text-sm text-black bg-gray-100 rounded-md">Rwf</span>
-                    </div>
-                    {addedToCart.includes(product.id) ? (
-                      <button 
-                        className="text-red-500 border border-red-500 rounded-md w-8 h-8 flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors"
-                        onClick={(e) => handleRemoveFromCart(e, product.id)}
-                      >
-                        ❌
-                      </button>
-                    ) : (
-                      <button 
-                        className="text-primary border border-primary rounded-md w-8 h-8 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
-                        onClick={(e) => handleAddToCart(e, product)}
-                      >
-                        +
-                      </button>
-                    )}
+        <div ref={carouselRef} className="flex gap-4 overflow-x-scroll scroll-smooth snap-x snap-mandatory scrollbar-hide">
+          {relatedProducts.map((product) => (
+            <div
+              key={product.id}
+              className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer snap-center min-w-[50%] sm:min-w-[50%] md:min-w-[33%] lg:min-w-[25%] xl:min-w-[20%]"
+              onClick={() => handleProductClick(product)}
+            >
+              <div className="aspect-square mb-4">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <div className="space-y-2">
+                <p className="text-gray-500 text-sm">{product.category}</p>
+                <p className="font-medium text-gray-800 line-clamp-1">{product.name}</p>
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-1">
+                    <span className="font-semibold">{product.price}</span>
+                    <span className="p-1 text-sm text-black bg-gray-100 rounded-md">Rwf</span>
                   </div>
+                  {cartItems.some(item => item.product.id === product.id) ? (
+                    <button 
+                      className="text-secondary border border-secondary rounded-md w-8 h-8 flex items-center justify-center hover:bg-tertiary hover:text-white transition-colors"
+                      onClick={(e) => handleRemoveFromCart(e, product.id)}
+                    >
+                      X
+                    </button>
+                  ) : (
+                    <button 
+                      className="text-secondary border border-secondary rounded-md w-8 h-8 flex items-center justify-center hover:bg-tertiary hover:text-white transition-colors"
+                      onClick={(e) => handleAddToCart(e, product)}
+                    >
+                      +
+                    </button>
+                  )}
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </div>

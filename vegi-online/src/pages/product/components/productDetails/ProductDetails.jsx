@@ -105,7 +105,7 @@ const ProductDetails = () => {
 
           <button 
             onClick={handleCartAction}
-            className="w-full bg-primary text-white py-3 text-lg font-medium hover:bg-orange-600 transition-colors"
+            className="w-full bg-secondary text-white py-3 text-lg font-medium hover:bg-tertiary transition-colors"
           >
             {isInCart ? 'Remove from cart' : 'Add to cart'}
           </button>
