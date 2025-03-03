@@ -50,7 +50,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="px-4 sm:px-6 lg:px-16 py-4 sm:py-6 lg:py-8">
+    <div className="div-container">
       {/* Desktop & Tablet View */}
       <div className="hidden md:flex flex-col lg:flex-row gap-4 lg:gap-5">
         {promotions.map((promo) => (

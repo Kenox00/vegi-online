@@ -49,7 +49,7 @@ const AllProduct = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="div-container">
       {/* Header and Filter Section */}
       <div className="mb-8">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
@@ -87,14 +87,14 @@ const AllProduct = () => {
         {products.map((product) => (
           <div
             key={product.id}
-            className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+            className="bg-white p-4 border-b border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
             onClick={() => handleProductClick(product)}
           >
             <div className="aspect-square mb-4">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="space-y-2">

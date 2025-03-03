@@ -31,14 +31,17 @@ const UserDropdown = ({ userName = "Mugisha Sam" }) => {
         </div>
         <div>
           <p className="text-xs sm:text-sm text-gray-500">Account</p>
+          <Link to={'/login'}>
           <p className="font-medium text-sm sm:text-base">Log in</p>
+          </Link>
+          
         </div>
       </div>
 
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
           <div className="px-4 py-2 border-b border-gray-100">
-            <div className="flex items-center gap-2">
+            <Link to="/profile" className="flex items-center gap-2">
               <div className="w-10 h-10 flex items-center justify-center">
                 <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
                   <User size={20} className="text-gray-600" />
@@ -48,7 +51,7 @@ const UserDropdown = ({ userName = "Mugisha Sam" }) => {
                 <p className="text-sm font-semibold">Welcome Back</p>
                 <p className="text-sm text-gray-600">{userName}</p>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="py-1">
@@ -97,3 +100,4 @@ UserDropdown.propTypes = {
 };
 
 export default UserDropdown;
+

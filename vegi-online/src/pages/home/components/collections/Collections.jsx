@@ -41,9 +41,9 @@ function Collections() {
   };
 
   return (
-    <div className="w-full px-4">
+    <div className="div-container">
       {/* Desktop View */}
-      <div className="hidden md:flex justify-center gap-4">
+      <div className="hidden md:flex justify-center gap-10">
         {collections.map((collection) => (
           <div
             key={collection.id}

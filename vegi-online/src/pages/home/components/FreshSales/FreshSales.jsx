@@ -53,7 +53,7 @@ const FreshSales = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="div-container">
       <div className="flex justify-between items-center mb-6">
         <Link to={`/products`}>
           <h2 className="text-xl font-semibold text-secondary">Flash Sales</h2>
@@ -75,11 +75,11 @@ const FreshSales = () => {
           {allProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer snap-center min-w-[50%] sm:min-w-[50%] md:min-w-[33%] lg:min-w-[25%] xl:min-w-[20%]"
+              className="bg-white p-4  hover:shadow-md transition-all duration-300 cursor-pointer snap-center min-w-[50%] sm:min-w-[50%] md:min-w-[33%] lg:min-w-[25%] xl:min-w-[20%]"
               onClick={() => handleProductClick(product)}
             >
               <div className="aspect-square mb-4">
-                <img src={product.image} alt={product.name} className="w-full h-full object-cover rounded-lg" />
+                <img src={product.image} alt={product.name} className="w-full h-full object-cover " />
               </div>
               <div className="space-y-2">
                 <p className="text-secondary text-sm">{product.category}</p>

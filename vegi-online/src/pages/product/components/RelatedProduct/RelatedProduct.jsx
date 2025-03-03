@@ -80,14 +80,14 @@ const RelatedProduct = () => {
           {relatedProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer snap-center min-w-[50%] sm:min-w-[50%] md:min-w-[33%] lg:min-w-[25%] xl:min-w-[20%]"
+              className="bg-white p-4 border-b border-gray-200 hover:shadow-md transition-all duration-300 cursor-pointer snap-center min-w-[50%] sm:min-w-[50%] md:min-w-[33%] lg:min-w-[25%] xl:min-w-[20%]"
               onClick={() => handleProductClick(product)}
             >
               <div className="aspect-square mb-4">
                 <img 
                   src={product.image} 
                   alt={product.name}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="space-y-2">

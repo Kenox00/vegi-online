@@ -36,7 +36,7 @@ const OurCategories = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-8 sm:py-12">
+    <section className="div-container sm:py-12">
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:justify-between">
         {/* Mobile App Section */}
         <div
@@ -81,11 +81,11 @@ const OurCategories = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {categories.map((category, index) => (
               <div key={index} className="flex flex-col items-center group cursor-pointer" onClick={()=>handleCategoryClick(category.name)}>
-                <div className=" flex-col w-full aspect-square border border-gray-200 bg-gray-50 flex items-center justify-center p-4 transition-all duration-300 group-hover:shadow-lg">
+                <div className=" flex-col w-full aspect-square border border-gray-200 bg-gray-50  flex items-center justify-center p-4 transition-all duration-300 group-hover:shadow-lg">
                   <img
                     src={category.image}
                     alt={category.name}
-                    className="w-4/5 h-4/5 object-contain"
+                    className="w-4/5 h-4/5 object-contain mix-blend-darken"
                   />
                    <p className="text-sm md:text-base text-gray-700 font-medium">{category.name}</p>
                 </div>
