@@ -67,7 +67,7 @@ const ProductPage = () => {
         </h2>
         {filteredProducts.length > 0 && (
           <button
-            className="flex items-center text-primary hover:text-primary/80 transition-colors"
+            className="flex items-center text-secondary hover:text-tertiary/80 transition-colors"
             onClick={() => navigate('/products')}
           >
             See All Products

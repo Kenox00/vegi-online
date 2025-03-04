@@ -21,6 +21,6 @@
     @apply flex flex-col gap-2 w-full md:w-96;
   }
   .div-container{
-    @apply  py-10 md:px-10
+    @apply  py-4  md:px-16
   }
 }

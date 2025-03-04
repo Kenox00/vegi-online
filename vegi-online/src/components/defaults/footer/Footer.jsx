@@ -9,6 +9,7 @@ import paypal from '/images/footer/paypal.png';
 
 const Footer = () => {
   return (
+    <div className="div-container">
     <footer className="bg-white pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 lg:pb-8 z-1000">
       {/* Upper Section */}
       <div className="max-w-7xl mx-auto px-4">
@@ -122,6 +123,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </div>
   );
 };
 

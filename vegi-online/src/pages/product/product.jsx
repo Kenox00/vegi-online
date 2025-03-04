@@ -7,7 +7,7 @@ const Product = () => {
   return (
     <>
       <Navbar />
-      <div className="flex">
+      <div className="flex div-container">
         <Categories />
         <ProductPage />
       </div>

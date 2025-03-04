@@ -59,8 +59,8 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-5xl mx-auto items-stretch">
+    <div className="div-container">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto items-stretch ">
         {/* Product Image */}
         <div className="bg-white p-4 border border-gray-200 flex items-center justify-center h-full">
           <img 

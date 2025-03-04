@@ -125,7 +125,7 @@ const Cart = () => {
                 </span>
               </div>
 
-              <button className="w-full bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition-colors">
+              <button className="w-full bg-secondary text-white py-3 rounded-lg hover:bg-tertiary transition-colors">
                 Proceed To Checkout
               </button>
 
